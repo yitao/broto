@@ -34,10 +34,25 @@
 	-->
 
 	<!-- 使用annotation 自动注册bean,并保证@Required,@Autowired的属性被注入 -->
-	<context:component-scan base-package="com" scoped-proxy="targetClass"/>
+	<context:component-scan base-package="com.**" scoped-proxy="targetClass"/>
 
 	<!-- 支持 @AspectJ 标记 -->
 	<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+
+	<!-- 配置druid监控spring jdbc -->
+	<bean id="druid-stat-interceptor" class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor"/>
+
+	<bean id="druid-stat-pointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut" scope="prototype">
+		<property name="patterns">
+			<list>
+				<value>com.broto.*.service.*</value>
+			</list>
+		</property>
+	</bean>
+	<aop:config proxy-target-class="true">
+		<aop:advisor advice-ref="druid-stat-interceptor" pointcut-ref="druid-stat-pointcut"/>
+	</aop:config>
 
 
 	<!-- <cache:annotation-driven cache-manager="cacheManager" proxy-target-class="true"/> -->

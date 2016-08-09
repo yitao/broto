@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("/test")
-public class TestController {
+public class TestController extends BaseController{
 
     @RequestMapping("/index")
     public String toIndex(){

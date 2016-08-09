@@ -36,7 +36,7 @@
   </filter>
   <filter-mapping>
     <filter-name>sitemesh</filter-name>
-    <url-pattern>/admin/*</url-pattern>
+    <url-pattern>/*</url-pattern>
     <dispatcher>INCLUDE</dispatcher>
     <dispatcher>FORWARD</dispatcher>
     <dispatcher>REQUEST</dispatcher>
