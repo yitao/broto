@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>系统设置-权限管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <link type="text/css" rel="stylesheet" href="${app_static}/jquery-crud/lib/jquery-easyui-1.3.5/themes/default/easyui.css">
+    <link type="text/css" rel="stylesheet" href="${app_static}/jquery-crud/lib/jquery-easyui-1.3.5/themes/icon.css"/>
+
+
+<#--<script type="text/javascript" src="${app_static}/jquery-crud/lib/jquery-easyui-1.3.5/jquery-1.10.2.min.js?t=1"></script>-->
+    <script type="text/javascript" src="${app_static}/jquery-crud/lib/jquery-easyui-1.3.5/jquery.easyui.min.js"></script>
+    <script charset="utf-8" src="${app_static}/jquery-crud/lib/layer/layer.js"></script>
+
+    <style type="text/css">
+        html,body{
+            overflow:auto;
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+        }
+        #container{
+            width:100%;
+            height:100%;
+            white-space: nowrap;
+        }
+
+        #roleWrap{
+            height:99%;
+            width:20%;
+            display:inline-block;
+        }
+        #openedRoleWrap{
+            height:99%;
+            width:40%;
+            display:inline-block;
+        }
+
+        #openedRoleGrid{
+            height:400px;
+            width:100%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div>
+        <div id="roleWrap">
+            <div id="roleGrid"></div>
+        </div>
+        <div id="openedRoleWrap">
+            <div id="openedRoleGrid"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var Roles = [];	//角色
+    var selectedRole={};
+    var selectedOpenedRole={};
+
+    $(function(){
+        requestRole();
+    });
+
+    function requestRole(){
+        $.ajax({
+            url:"${ctx!}/admin/permission/queryr2r.json",
+            type:"post",
+            success : function(json){
+                if(json.code=='0'){
+                    Roles = json.result;
+                    renderRoleGrid(Roles);
+                    renderopenedRoleGrid([]);
+                }
+            }
+        });
+    }
+
+    function renderRoleGrid(data){
+        $("#roleGrid").datagrid({
+            rownumbers:true,
+            singleSelect:true,
+            data: data,
+            columns:[[
+                {field:'name',title:'角色名称',width:140,align:'center'}
+            ]],
+            onSelect:selectRoleRow
+        });
+        $("#roleGrid").datagrid("resize",{height:400});
+    }
+    var myview = $.fn.datagrid.defaults.view;
+    myview.onAfterRender=regStateEvent;
+
+    function renderopenedRoleGrid(data){
+        $("#openedRoleGrid").datagrid({
+            rownumbers:true,
+            singleSelect:true,
+            data: data,
+            columns:[[
+                {field:'name',title:'角色名称',width:140,align:'center'},
+                {field:'state',title:'状态',width:80,align:'center',formatter: openedRoleStateFormatter}
+            ]],
+            onSelect:selectopenedRoleRow,
+            view:myview
+        });
+        $("#openedRoleGrid").datagrid("resize",{height:400});
+    }
+
+
+    function selectRoleRow(rowIndex, rowData){
+        selectedRole.rowIndex = rowIndex;
+        selectedRole.rowData = rowData;
+        renderopenedRoleGrid([]);
+        reloadopenedRoleGrid(rowData.openedRoles);
+        selectedOpenedRole={};
+        selectedAction={};
+    }
+
+    function selectopenedRoleRow(rowIndex, rowData){
+        selectedOpenedRole.rowIndex = rowIndex;
+        selectedOpenedRole.rowData = rowData;
+    }
+
+
+    function openedRoleStateFormatter(value,row,index){
+        var ihtml = "<div><input type='checkbox' data-type='openedRole' data-id='"+row._id+"' data-state='"+value+"' onclick='clickOpenedRole(this,"+index+")'/></div>"
+        return ihtml;
+    }
+
+    function clickOpenedRole(self,rowIndex){
+        var state = self.checked?1:0;
+        var rindex = selectedRole.rowIndex;
+        var rowData = Roles[rindex].openedRoles[rowIndex];
+        selectedOpenedRole.rowIndex = rowIndex;
+        selectedOpenedRole.rowData = rowData;
+        var mindex = rowIndex;
+        //TODO 点击实时分配权限
+        var roleId = selectedRole.rowData.id;
+        var openedRoleId = selectedOpenedRole.rowData.id;
+        var data = {roleId:roleId,openedRoleId:openedRoleId};
+        var title = self.checked?"正在分配权限":"正在移除权限";
+        //TODO 点击实时分配权限
+        var index = layer.load(1, {
+            title:title,
+            shade: [0.5,'#fff'] //0.1透明度的白色背景
+        });
+        var  url = self.checked?"${ctx}/admin/permission/assignR2R.json":"${ctx}/admin/permission/removeR2R.json";
+        $.ajax({
+            url:url,
+            type:"post",
+            data:data,
+            success : function(json){
+                layer.close(index);
+                if(json.code=='0'){
+                    layer.msg(state==1?"分配权限成功":"移除权限成功");
+                    Roles[rindex].openedRoles[mindex].state = state;
+                    for(var i in Roles[rindex].openedRoles[mindex].actions){
+                        Roles[rindex].openedRoles[mindex].actions[i].state = state;
+                    }
+                    reloadopenedRoleGrid(Roles[rindex].openedRoles);
+                }else{
+                    layer.msg(self.checked?"分配权限失败":"移除权限失败");
+                }
+            }
+        });
+    }
+
+    function regStateEvent(){
+        $("[data-state='0']").each(function(i,item){
+            item.checked = false;
+        });
+        $("[data-state='1']").each(function(i,item){
+            item.checked = true;
+        });
+        $("[data-state='2']").each(function(i,item){
+            item.indeterminate = true;
+        });
+    }
+
+    function reloadopenedRoleGrid(data){
+        $("#openedRoleGrid").datagrid("loadData", data);
+        $("#openedRoleGrid").datagrid("resize",{height:400});
+    }
+
+</script>
+</body>
+</html>

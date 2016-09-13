@@ -8,7 +8,7 @@
 
 	<web>
 		<link target="/">
-			<dir name="D:/projects/broto/src/main/webapp">
+			<dir name="D:/projects/broto/webapp">
 			</dir>
 		</link>
 	</web>

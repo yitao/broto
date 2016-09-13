@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>系统设置-权限管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <link type="text/css" rel="stylesheet" href="${app_static}/jquery-crud/lib/jquery-easyui-1.3.5/themes/default/easyui.css">
+    <link type="text/css" rel="stylesheet" href="${app_static}/jquery-crud/lib/jquery-easyui-1.3.5/themes/icon.css"/>
+
+    <script type="text/javascript" src="${app_static}/jquery-crud/lib/jquery-easyui-1.3.5/jquery.easyui.min.js"></script>
+    <script charset="utf-8" src="${app_static}/jquery-crud/lib/layer/layer.js"></script>
+
+    <style type="text/css">
+        html,body{
+            overflow:auto;
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+        }
+        #container{
+            width:100%;
+            height:100%;
+            white-space: nowrap;
+        }
+
+        #roleWrap{
+            height:99%;
+            width:20%;
+            display:inline-block;
+        }
+        #modelWrap{
+            height:99%;
+            width:40%;
+            display:inline-block;
+        }
+        #actionWrap{
+            height:99%;
+            width:40%;
+            display:inline-block;
+        }
+        #modelGrid{
+            height:400px;
+            width:100%;
+        }
+        #actionGrid{
+            height:400px;
+            width:100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div>
+        <div id="roleWrap">
+            <div id="roleGrid"></div>
+        </div>
+        <div id="modelWrap">
+            <div id="modelGrid"></div>
+        </div>
+        <div id="actionWrap">
+            <div id="actionGrid"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var Roles = [];	//角色
+    var selectedRole={};
+    var selectedModule={};
+    var selectedAction={};
+
+    $(function(){
+        requestRole();
+    });
+
+    function requestRole(){
+        $.ajax({
+            url:"${ctx!}/admin/permission/queryrolewithprivilege.json",
+            type:"post",
+            success : function(json){
+                if(json.code=='0'){
+                    Roles = json.result;
+                    renderRoleGrid(Roles);
+                    renderModuleGrid([]);
+                    renderActionGrid([]);
+                }
+            }
+        });
+    }
+
+    function renderRoleGrid(data){
+        $("#roleGrid").datagrid({
+            rownumbers:true,
+            singleSelect:true,
+            data: data,
+            columns:[[
+                {field:'name',title:'角色名称',width:140,align:'center'}
+            ]],
+            onSelect:selectRoleRow
+        });
+        $("#roleGrid").datagrid("resize",{height:400});
+    }
+    var myview = $.fn.datagrid.defaults.view;
+    myview.onAfterRender=regStateEvent;
+
+    function renderModuleGrid(data){
+        $("#modelGrid").datagrid({
+            rownumbers:true,
+            singleSelect:true,
+            data: data,
+            columns:[[
+                {field:'label',title:'模块名称',width:140,align:'center'},
+                {field:'desc',title:'模块描述',width:200,align:'center'},
+                {field:'state',title:'模块状态',width:80,align:'center',formatter: modelStateFormatter}
+            ]],
+            onSelect:selectModuleRow,
+            view:myview
+        });
+        $("#modelGrid").datagrid("resize",{height:400});
+    }
+
+    function renderActionGrid(data){
+        $('#actionGrid').datagrid({
+            rownumbers:true,
+            singleSelect:true,
+            data: data,
+            columns:[[
+                {field:'label',title:'动作名称',width:140,align:'center'},
+                {field:'desc',title:'动作描述',width:200,align:'center'},
+                {field:'state',title:'动作状态',width:80,align:'center',formatter: actionStateFormatter}
+            ]],
+            onSelect:selectActionRow,
+            view:myview
+        });
+        $("#actionGrid").datagrid("resize",{height:400});
+    }
+
+    function selectRoleRow(rowIndex, rowData){
+        selectedRole.rowIndex = rowIndex;
+        selectedRole.rowData = rowData;
+        renderModuleGrid([]);
+        renderActionGrid([]);
+        reloadModuleGrid(rowData.modules);
+        selectedModule={};
+        selectedAction={};
+    }
+
+    function selectModuleRow(rowIndex, rowData){
+        selectedModule.rowIndex = rowIndex;
+        selectedModule.rowData = rowData;
+        reloadActionGrid(rowData.actions);
+        selectedAction={};
+    }
+
+    function selectActionRow(rowIndex, rowData){
+        selectedAction.rowIndex = rowIndex;
+        selectedAction.rowData = rowData;
+    }
+
+    function modelStateFormatter(value,row,index){
+        var ihtml = "<div><input type='checkbox' data-type='model' data-id='"+row._id+"' data-state='"+value+"' onclick='clickModule(this,"+index+")'/></div>"
+        return ihtml;
+    }
+    function actionStateFormatter(value,row,index){
+        var ihtml = "<div><input type='checkbox' data-type='action' data-mid='"+row._mid+"' data-state='"+value+"' onclick='clickAction(this,"+index+")'/></div>"
+        return ihtml;
+    }
+    function clickModule(self,rowIndex){
+        var state = self.checked?1:0;
+        var rindex = selectedRole.rowIndex;
+        var rowData = Roles[rindex].modules[rowIndex];
+        selectedModule.rowIndex = rowIndex;
+        selectedModule.rowData = rowData;
+        var mindex = rowIndex;
+        //TODO 点击实时分配权限
+        var roleId = selectedRole.rowData.id;
+        var moduleId = selectedModule.rowData.id;
+        var data = {roleId:roleId,moduleId:moduleId};
+        var title = self.checked?"正在分配权限":"正在移除权限";
+        //TODO 点击实时分配权限
+        var index = layer.load(1, {
+            title:title,
+            shade: [0.5,'#fff'] //0.1透明度的白色背景
+        });
+        var  url = self.checked?"${ctx}/admin/permission/assignRM.json":"${ctx}/admin/permission/removeRM.json";
+        $.ajax({
+            url:url,
+            type:"post",
+            data:data,
+            success : function(json){
+                layer.close(index);
+                if(json.code=='0'){
+                    layer.msg(state==1?"分配权限成功":"移除权限成功");
+                    Roles[rindex].modules[mindex].state = state;
+                    for(var i in Roles[rindex].modules[mindex].actions){
+                        Roles[rindex].modules[mindex].actions[i].state = state;
+                    }
+                    reloadModuleGrid(Roles[rindex].modules);
+                    reloadActionGrid(Roles[rindex].modules[mindex].actions);
+                }else{
+                    layer.msg(self.checked?"分配权限失败":"移除权限失败");
+                }
+            }
+        });
+
+    }
+    function clickAction(self,rowIndex){
+        var state = self.checked?1:0;
+        var _mid = $(self).attr("data-mid");
+        var checkedSize = $("[data-mid='"+_mid+"']:checked").length;
+        var allSize = $("[data-mid='"+_mid+"']").length;
+        var rindex = selectedRole.rowIndex;
+        var mindex = selectedModule.rowIndex;
+        var aindex = rowIndex;
+        selectedAction.rowIndex = rowIndex;
+        var rowData  = Roles[rindex].modules[mindex].actions[rowIndex];
+        selectedAction.rowData = rowData;
+        var roleId = selectedRole.rowData.id;
+        var moduleId = selectedModule.rowData.id;
+        var actionId = selectedAction.rowData.id;
+        var data = {roleId:roleId,moduleId:moduleId,actionId:actionId};
+        var title = self.checked?"正在分配权限":"正在移除权限";
+        //TODO 点击实时分配权限
+        var index = layer.load(1, {
+            title:title,
+            shade: [0.5,'#fff'] //0.1透明度的白色背景
+        });
+        var  url = self.checked?"${ctx}/admin/permission/assignRMA.json":"${ctx}/admin/permission/removeRMA.json";
+        $.ajax({
+            url:url,
+            type:"post",
+            data:data,
+            success : function(json){
+                layer.close(index);
+                if(json.code=='0'){
+                    layer.msg(state==1?"分配权限成功":"移除权限成功");
+                    Roles[rindex].modules[mindex].actions[aindex].state=state;
+                    if(checkedSize==0){
+                        Roles[rindex].modules[mindex].state=0;
+                    }else if(checkedSize>0 && checkedSize<allSize){
+                        Roles[rindex].modules[mindex].state=2;
+                    }else{
+                        Roles[rindex].modules[mindex].state=1;
+                    }
+                    reloadModuleGrid(Roles[rindex].modules);
+                    reloadActionGrid(Roles[rindex].modules[mindex].actions);
+                }else{
+                    layer.msg(self.checked?"分配权限失败":"移除权限失败");
+                }
+            }
+        });
+
+    }
+    function regStateEvent(){
+        $("[data-state='0']").each(function(i,item){
+            item.checked = false;
+        });
+        $("[data-state='1']").each(function(i,item){
+            item.checked = true;
+        });
+        $("[data-state='2']").each(function(i,item){
+            item.indeterminate = true;
+        });
+    }
+
+    function reloadModuleGrid(data){
+        $("#modelGrid").datagrid("loadData", data);
+        $("#modelGrid").datagrid("resize",{height:400});
+    }
+    function reloadActionGrid(data){
+        $("#actionGrid").datagrid("loadData", data);
+        $("#actionGrid").datagrid("resize",{height:400});
+    }
+
+</script>
+</body>
+</html>
