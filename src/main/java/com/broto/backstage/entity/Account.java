@@ -13,8 +13,19 @@ public class Account extends BaseDeletedDataEntity {
     String password;
     boolean inuse;
     String code;
+
     @Transient
     List<Role> roles;
+
+    public Account() {
+    }
+
+    public Account(String account, String password, boolean inuse, String code) {
+        this.account = account;
+        this.password = password;
+        this.inuse = inuse;
+        this.code = code;
+    }
 
     public String getAccount() {
         return account;

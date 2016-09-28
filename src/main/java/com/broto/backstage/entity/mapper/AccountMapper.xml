@@ -6,8 +6,8 @@
         bro_account
     </sql>
     <insert id="insert" parameterType="Account">
-        INSERT  INTO <include refid="tableName"/>(id,ctime,`order`,account,password,inuse,code)
-        VALUES (#{id},#{ctime},#{order},#{account},#{password},#{inuse},#{code})
+        INSERT  INTO <include refid="tableName"/>(id,ctime,account,password,inuse,code)
+        VALUES (#{id},#{ctime},#{account},#{password},#{inuse},#{code})
     </insert>
 
     <delete id="hardDelete" parameterType="String">
@@ -23,9 +23,6 @@
         <set>
             <if test="mtime != null">
                 mtime = #{mtime},
-            </if>
-            <if test="order != null">
-                'order'= #{order},
             </if>
             <if test="account != null">
                 account = #{account},

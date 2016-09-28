@@ -15,15 +15,5 @@ import java.util.Map;
  */
 @Repository
 public class AccountDaoImpl extends BaseSqlDaoImpl<Account,String> implements AccountDao {
-    @Override
-    public Account findOneByAccount(String account) {
-        Map<String,Object> query = new HashMap<>();
-        query.put("account",account);
-        List<Account> accountList = findAllByMap(query);
-        if(CollectionUtils.isEmpty(accountList)){
-            return null;
-        }else{
-            return accountList.get(0);
-        }
-    }
+
 }
