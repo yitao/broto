@@ -1,71 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f982f35-200b-4288-921b-514974468131" name="Default" comment="code3">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDeletedDataEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/AccountService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/RoleService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/util/IDUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto.war" afterPath="$PROJECT_DIR$/target/broto.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/dao/mybatis/BaseSqlDaoImpl.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/dao/mybatis/BaseSqlDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/Account.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/Account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/Action.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/Action.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/BaseDataEntity.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/BaseDataEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/BaseLabelEntity.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/BaseLabelEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/Module.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/Module.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/AccountDao.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/AccountDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/ActionDao.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/ActionDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/BaseSqlDao.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/BaseSqlDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/ModuleDao.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/ModuleDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/ARDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/ARDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/AccountDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/AccountDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/ActionDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/ActionDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/BaseSqlDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/BaseSqlDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/ModuleDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/ModuleDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/R2MADaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/R2MADaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/R2RDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/R2RDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/RMADaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/RMADaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/RoleDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/dao/mybatis/RoleDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/Account.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/Account.class" />
+    <list default="true" id="6f982f35-200b-4288-921b-514974468131" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/PermissionService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/broto/service/ActionServiceTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/Action.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/Action.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/BaseDataEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/BaseDataEntity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/BaseLabelEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/BaseLabelEntity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/Module.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/Module.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/Role.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/Role.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/broto/service/ModuleServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/broto/service/ModuleServiceTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/permission.sql" afterPath="$PROJECT_DIR$/script/permission.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/AccountDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/AccountDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/ActionDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/ActionDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/BaseSqlDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/BaseSqlDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/ModuleDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/ModuleDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/ARDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/ARDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/AccountDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/AccountDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/ActionDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/ActionDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/BaseSqlDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/BaseSqlDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/ModuleDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/ModuleDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/R2MADaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/R2MADaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/R2RDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/R2RDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/RMADaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/RMADaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/RoleDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/RoleDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Account.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Action.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Action.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDataEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDataEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseLabelEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseLabelEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Module.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Module.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/AccountMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/AccountMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ActionMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ActionMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ModuleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ModuleMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/RoleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/RoleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/RoleService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/AccountMapper.xml" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/AccountMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/mapper/AccountMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/mapper/AccountMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/mapper/ActionMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/mapper/ActionMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/mapper/ModuleMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/mapper/ModuleMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/entity/mapper/RoleMapper.xml" />
@@ -92,90 +47,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ModuleMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ModuleMapper.xml">
+      <file leaf-file-name="ModuleServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="43.714287">
-              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
               <folding>
-                <marker date="1475035410094" expanded="true" signature="779:986" placeholder="INSERT INTO " />
-                <marker date="1475035410094" expanded="true" signature="1062:1119" placeholder="DELETE FROM " />
-                <marker date="1475035410094" expanded="true" signature="1197:1274" placeholder="UPDATE delet... " />
-                <marker date="1475035410094" expanded="true" signature="1346:2087" placeholder="UPDATE `orde... " />
-                <marker date="1475035410094" expanded="true" signature="2182:2241" placeholder="select * fro... where" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Account.java">
+      <file leaf-file-name="RoleMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/RoleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="10.928572">
+              <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+              <folding>
+                <marker date="1475044970970" expanded="true" signature="308:481" placeholder="INSERT INTO " />
+                <marker date="1475044970970" expanded="true" signature="557:614" placeholder="DELETE FROM " />
+                <marker date="1475044970970" expanded="true" signature="692:769" placeholder="UPDATE delet... " />
+                <marker date="1475044970970" expanded="true" signature="840:1555" placeholder="UPDATE `orde... " />
+                <marker date="1475044970970" expanded="true" signature="1648:1707" placeholder="select * fro... where" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Role.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="50" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="50" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ActionMapper.xml">
+      <file leaf-file-name="ActionService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.0">
-              <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="5" selection-start-line="22" selection-start-column="3" selection-end-line="45" selection-end-column="5" />
               <folding>
-                <marker date="1475041680269" expanded="true" signature="319:560" placeholder="INSERT INTO(... " />
-                <marker date="1475041680269" expanded="true" signature="632:1559" placeholder="UPDATE `orde... " />
-                <marker date="1475041680269" expanded="true" signature="1635:1692" placeholder="DELETE FROM " />
-                <marker date="1475041680269" expanded="true" signature="1770:1847" placeholder="UPDATE delet... " />
-                <marker date="1475041680269" expanded="true" signature="1942:2001" placeholder="select * fro... where" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/RoleMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35409254">
-              <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-              <folding>
-                <marker date="1475041703390" expanded="true" signature="308:453" placeholder="INSERT INTO " />
-                <marker date="1475041703390" expanded="true" signature="529:586" placeholder="DELETE FROM " />
-                <marker date="1475041703390" expanded="true" signature="664:741" placeholder="UPDATE delet... " />
-                <marker date="1475041703390" expanded="true" signature="812:1355" placeholder="UPDATE `orde... " />
-                <marker date="1475041703390" expanded="true" signature="1448:1507" placeholder="select * fro... where" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ARMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ARMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.535714">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1469602897157" expanded="true" signature="720:819" placeholder="INSERT INTO(... " />
-                <marker date="1469602897157" expanded="true" signature="887:999" placeholder="DELETE FROM " />
-                <marker date="1469602897157" expanded="true" signature="1082:1170" placeholder="DELETE FROM " />
-                <marker date="1469602897157" expanded="true" signature="1250:1332" placeholder="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/AccountMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="22.0">
-              <caret line="31" column="14" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="14" />
-              <folding>
-                <marker date="1474877302498" expanded="true" signature="317:485" placeholder="INSERT INTO " />
-                <marker date="1474877302498" expanded="true" signature="561:618" placeholder="DELETE FROM " />
-                <marker date="1474877302498" expanded="true" signature="696:773" placeholder="DELETE FROM " />
-                <marker date="1474877302498" expanded="true" signature="846:1486" placeholder="UPDATE mtime... " />
-                <marker date="1474877302498" expanded="true" signature="1581:1640" placeholder="select * fro... where" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#533#534#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,30 +102,34 @@
       <file leaf-file-name="permission.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/permission.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.464286">
-              <caret line="119" column="35" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+            <state vertical-scroll-proportion="-14.928572">
+              <caret line="56" column="7" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseSqlDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/BaseSqlDaoImpl.java">
+      <file leaf-file-name="PermissionService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/PermissionService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModuleServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/RoleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.77684563">
+              <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,7 +139,29 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="46" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="List.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Home/Java/jdk1.7.0_76/src.zip!/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="108" column="7" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/broto/service/ActionServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -248,9 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/resources/application-unit.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/com/broto/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/ARDao.java" />
         <option value="$PROJECT_DIR$/src/test/resources/applicationContext-test.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext-database.xml" />
@@ -272,7 +213,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/BaseSqlDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseNoDeleteDataEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDeletedDataEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDataEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/AccountMapper.xml" />
@@ -285,20 +225,24 @@
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/R2RDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/RMADaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/RoleDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/ModuleDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/ModuleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseLabelEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Module.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Action.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/BaseSqlDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/util/IDUtils.java" />
         <option value="$PROJECT_DIR$/script/permission.sql" />
-        <option value="$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDataEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseLabelEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Module.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Action.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ModuleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ActionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/broto/service/ActionServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/PermissionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/RoleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/RoleService.java" />
       </list>
     </option>
   </component>
@@ -436,6 +380,66 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="broto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="broto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="broto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="broto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="broto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="broto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -482,6 +486,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="broto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="broto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -610,6 +644,7 @@
       <recent name="D:\projects\broto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.broto.service" />
       <recent name="com.broto.backstage.service" />
       <recent name="com.broto.backstage.entity" />
     </key>
@@ -621,33 +656,7 @@
       <recent name="D:\projects\broto\src\main\java\com\broto\backstage\util" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ModuleServiceTest.testFindAll">
-    <configuration default="false" name="HolderTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.broto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="broto" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.broto" />
-      <option name="MAIN_CLASS_NAME" value="com.broto.HolderTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ModuleServiceTest.findAllModuleAndAction">
     <configuration default="false" name="ModuleServiceTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -674,7 +683,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ModuleServiceTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ActionServiceTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.broto.service.*" />
@@ -685,7 +694,59 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.broto.service" />
-      <option name="MAIN_CLASS_NAME" value="com.broto.service.ModuleServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="com.broto.service.ActionServiceTest" />
+      <option name="METHOD_NAME" value="testSave" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ActionServiceTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.broto.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="broto" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.broto.service" />
+      <option name="MAIN_CLASS_NAME" value="com.broto.service.ActionServiceTest" />
+      <option name="METHOD_NAME" value="testDelete" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ActionServiceTest.testFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.broto.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="broto" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.broto.service" />
+      <option name="MAIN_CLASS_NAME" value="com.broto.service.ActionServiceTest" />
       <option name="METHOD_NAME" value="testFindAll" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -700,7 +761,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ModuleServiceTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ModuleServiceTest.findAllModuleAndAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.broto.service.*" />
@@ -712,7 +773,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.broto.service" />
       <option name="MAIN_CLASS_NAME" value="com.broto.service.ModuleServiceTest" />
-      <option name="METHOD_NAME" value="testDelete" />
+      <option name="METHOD_NAME" value="findAllModuleAndAction" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1290,19 +1351,21 @@
         </option>
       </method>
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.broto" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HolderTest.test" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.testSave" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.testFindAll" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.testDelete" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.testSave" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ActionServiceTest.testSave" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ActionServiceTest.testDelete" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ActionServiceTest.testFindAll" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.findAllModuleAndAction" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.testFindAll" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.testDelete" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.testSave" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.HolderTest.test" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.findAllModuleAndAction" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ActionServiceTest.testFindAll" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ActionServiceTest.testDelete" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ActionServiceTest.testSave" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ModuleServiceTest.testSave" />
       </list>
     </recent_temporary>
   </component>
@@ -1337,7 +1400,7 @@
       <workItem from="1473748411054" duration="3578000" />
       <workItem from="1474515052623" duration="655000" />
       <workItem from="1474870877059" duration="9691000" />
-      <workItem from="1475026286136" duration="6360000" />
+      <workItem from="1475026286136" duration="10049000" />
     </task>
     <task id="LOCAL-00001" summary="code1">
       <created>1469524886271</created>
@@ -1375,43 +1438,49 @@
       <option name="project" value="LOCAL" />
       <updated>1473749334205</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="recode">
+      <created>1475041790692</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1475041790692</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ModuleServiceTest_testDelete - 2016.09.28 at 11h 38m 15s.xml">
-      <configuration name="ModuleServiceTest.testDelete" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testDelete - 2016.09.28 at 14h 25m 55s.xml">
+      <configuration name="ActionServiceTest.testDelete" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testDelete - 2016.09.28 at 11h 55m 35s.xml">
-      <configuration name="ModuleServiceTest.testDelete" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testDelete - 2016.09.28 at 14h 26m 13s.xml">
+      <configuration name="ActionServiceTest.testDelete" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testFindAll - 2016.09.28 at 11h 36m 31s.xml">
-      <configuration name="ModuleServiceTest.testFindAll" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testFindAll - 2016.09.28 at 14h 27m 05s.xml">
+      <configuration name="ActionServiceTest.testFindAll" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testFindAll - 2016.09.28 at 11h 37m 43s.xml">
-      <configuration name="ModuleServiceTest.testFindAll" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testFindAll - 2016.09.28 at 14h 27m 35s.xml">
+      <configuration name="ActionServiceTest.testFindAll" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testFindAll - 2016.09.28 at 11h 56m 48s.xml">
-      <configuration name="ModuleServiceTest.testFindAll" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testFindAll - 2016.09.28 at 14h 27m 48s.xml">
+      <configuration name="ActionServiceTest.testFindAll" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testFindAll - 2016.09.28 at 11h 57m 02s.xml">
-      <configuration name="ModuleServiceTest.testFindAll" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testFindAll - 2016.09.28 at 14h 28m 03s.xml">
+      <configuration name="ActionServiceTest.testFindAll" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testFindAll - 2016.09.28 at 12h 00m 02s.xml">
-      <configuration name="ModuleServiceTest.testFindAll" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testSave - 2016.09.28 at 14h 23m 31s.xml">
+      <configuration name="ActionServiceTest.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testSave - 2016.09.28 at 11h 45m 21s.xml">
-      <configuration name="ModuleServiceTest.testSave" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testSave - 2016.09.28 at 14h 25m 18s.xml">
+      <configuration name="ActionServiceTest.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testSave - 2016.09.28 at 11h 46m 19s.xml">
-      <configuration name="ModuleServiceTest.testSave" configurationId="JUnit" />
+    <history-entry file="ActionServiceTest_testSave - 2016.09.28 at 14h 25m 27s.xml">
+      <configuration name="ActionServiceTest.testSave" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ModuleServiceTest_testSave - 2016.09.28 at 11h 55m 17s.xml">
-      <configuration name="ModuleServiceTest.testSave" configurationId="JUnit" />
+    <history-entry file="ModuleServiceTest_findAllModuleAndAction - 2016.09.28 at 14h 34m 26s.xml">
+      <configuration name="ModuleServiceTest.findAllModuleAndAction" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54209000" />
+    <option name="totallyTimeSpent" value="57898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -1427,7 +1496,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19764957" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1440,7 +1509,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25568798" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32286024" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1485,7 +1554,8 @@
     <MESSAGE value="code1" />
     <MESSAGE value="code2" />
     <MESSAGE value="code3" />
-    <option name="LAST_COMMIT_MESSAGE" value="code3" />
+    <MESSAGE value="recode" />
+    <option name="LAST_COMMIT_MESSAGE" value="recode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1496,8 +1566,20 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/broto/service/ActionServiceTest.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1506,34 +1588,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0714285">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/sitemesh3.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3571428">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/decorators/admin/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52441615">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/views/admin/permission/ar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/views/admin/permission/ma.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1630,18 +1684,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDataEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/AR.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1649,6 +1696,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1656,13 +1704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1671,6 +1712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1738,14 +1780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/dao/mybatis/ModuleDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1759,20 +1793,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-          <folding>
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#766#767#0" expanded="false" />
-            <element signature="e#1333#1334#0" expanded="false" />
-            <element signature="e#1374#1375#0" expanded="false" />
-            <element signature="e#1406#1407#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1792,42 +1812,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDeletedDataEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseLabelEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Module.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/util/IDUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#192#193#0" expanded="false" />
+            <element signature="e#243#244#0" expanded="false" />
+            <element signature="e#282#283#0" expanded="false" />
+            <element signature="e#352#353#0" expanded="false" />
+            <element signature="e#393#394#0" expanded="false" />
+            <element signature="e#444#445#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1837,34 +1833,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script/permission.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.464286">
-          <caret line="119" column="35" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1882,20 +1850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ActionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.0">
-          <caret line="130" column="17" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
-          <folding>
-            <marker date="1475041680269" expanded="true" signature="319:560" placeholder="INSERT INTO(... " />
-            <marker date="1475041680269" expanded="true" signature="632:1559" placeholder="UPDATE `orde... " />
-            <marker date="1475041680269" expanded="true" signature="1635:1692" placeholder="DELETE FROM " />
-            <marker date="1475041680269" expanded="true" signature="1770:1847" placeholder="UPDATE delet... " />
-            <marker date="1475041680269" expanded="true" signature="1942:2001" placeholder="select * fro... where" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ARMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="14.535714">
@@ -1909,20 +1863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ModuleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="43.714287">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <marker date="1475035410094" expanded="true" signature="779:986" placeholder="INSERT INTO " />
-            <marker date="1475035410094" expanded="true" signature="1062:1119" placeholder="DELETE FROM " />
-            <marker date="1475035410094" expanded="true" signature="1197:1274" placeholder="UPDATE delet... " />
-            <marker date="1475035410094" expanded="true" signature="1346:2087" placeholder="UPDATE `orde... " />
-            <marker date="1475035410094" expanded="true" signature="2182:2241" placeholder="select * fro... where" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Account.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1931,16 +1871,189 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDeletedDataEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseDataEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/BaseLabelEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#1050#1051#0" expanded="false" />
+            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1118#1119#0" expanded="false" />
+            <element signature="e#1152#1153#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="155" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="155" />
+          <folding>
+            <element signature="e#1361#1362#0" expanded="false" />
+            <element signature="e#1388#1389#0" expanded="false" />
+            <element signature="e#1492#1493#0" expanded="false" />
+            <element signature="e#1519#1520#0" expanded="false" />
+            <element signature="e#1559#1560#0" expanded="false" />
+            <element signature="e#1591#1592#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ModuleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.785713">
+          <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
+          <folding>
+            <marker date="1475043888443" expanded="true" signature="779:1001" placeholder="INSERT INTO " />
+            <marker date="1475043888443" expanded="true" signature="1077:1134" placeholder="DELETE FROM " />
+            <marker date="1475043888443" expanded="true" signature="1212:1289" placeholder="UPDATE delet... " />
+            <marker date="1475043888443" expanded="true" signature="1361:2191" placeholder="UPDATE `orde... " />
+            <marker date="1475043888443" expanded="true" signature="2286:2345" placeholder="select * fro... where" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/ActionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-44.214287">
+          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+          <folding>
+            <marker date="1475044043537" expanded="true" signature="319:575" placeholder="INSERT INTO(... " />
+            <marker date="1475044043537" expanded="true" signature="647:1663" placeholder="UPDATE `orde... " />
+            <marker date="1475044043537" expanded="true" signature="1739:1796" placeholder="DELETE FROM " />
+            <marker date="1475044043537" expanded="true" signature="1874:1951" placeholder="UPDATE delet... " />
+            <marker date="1475044043537" expanded="true" signature="2046:2105" placeholder="select * fro... where" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Module.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="e#1630#1631#0" expanded="true" />
+            <element signature="e#1662#1663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/broto/service/ModuleServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/PermissionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/permission.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.928572">
+          <caret line="56" column="7" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/broto/service/ActionServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/mapper/RoleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35409254">
-          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+        <state vertical-scroll-proportion="10.928572">
+          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
           <folding>
-            <marker date="1475041703390" expanded="true" signature="308:453" placeholder="INSERT INTO " />
-            <marker date="1475041703390" expanded="true" signature="529:586" placeholder="DELETE FROM " />
-            <marker date="1475041703390" expanded="true" signature="664:741" placeholder="UPDATE delet... " />
-            <marker date="1475041703390" expanded="true" signature="812:1355" placeholder="UPDATE `orde... " />
-            <marker date="1475041703390" expanded="true" signature="1448:1507" placeholder="select * fro... where" />
+            <marker date="1475044970970" expanded="true" signature="308:481" placeholder="INSERT INTO " />
+            <marker date="1475044970970" expanded="true" signature="557:614" placeholder="DELETE FROM " />
+            <marker date="1475044970970" expanded="true" signature="692:769" placeholder="UPDATE delet... " />
+            <marker date="1475044970970" expanded="true" signature="840:1555" placeholder="UPDATE `orde... " />
+            <marker date="1475044970970" expanded="true" signature="1648:1707" placeholder="select * fro... where" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="5" selection-start-line="22" selection-start-column="3" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Home/Java/jdk1.7.0_76/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="7" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/broto/backstage/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77684563">
+          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -51,19 +51,19 @@
         <where>
             1 = 1
             <if test="order != null">
-                and `order` = #{order},
+                and `order` = #{order}
             </if>
             <if test="name != null">
-                and `name` = #{name},
+                and `name` = #{name}
             </if>
             <if test="desc != null">
-                and `desc` = #{desc},
+                and `desc` = #{desc}
             </if>
             <if test="inuse != null">
-                and `inuse` = #{inuse},
+                and `inuse` = #{inuse}
             </if>
             <if test="mtime != null">
-                and `mtime` = #{mtime},
+                and `mtime` = #{mtime}
             </if>
             <if test="deleted != null">
                 and deleted = #{deleted}
@@ -76,19 +76,19 @@
         <where>
             1 = 1
             <if test="order != null">
-                and `order` = #{order},
+                and `order` = #{order}
             </if>
             <if test="name != null">
-                and `name` = #{name},
+                and `name` = #{name}
             </if>
             <if test="desc != null">
-                and `desc` = #{desc},
+                and `desc` = #{desc}
             </if>
             <if test="inuse != null">
-                and `inuse` = #{inuse},
+                and `inuse` = #{inuse}
             </if>
             <if test="mtime != null">
-                and `mtime` = #{mtime},
+                and `mtime` = #{mtime}
             </if>
             <if test="deleted != null">
                 and deleted = #{deleted}

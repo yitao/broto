@@ -19,8 +19,8 @@
 
 
     <insert id="insert" parameterType="Module">
-        INSERT INTO <include refid="tableName"/>(id,ctime,`order`,label,hint,`desc`,`fa_module_id`,`show`,`deleted`)
-        VALUES (#{id},#{ctime},#{order},#{label},#{hint},#{desc},#{faModuleId},#{show},#{deleted})
+        INSERT INTO <include refid="tableName"/>(id,ctime,`order`,label,hint,`desc`,`fa_module_id`,`show`,`deleted`,`code`)
+        VALUES (#{id},#{ctime},#{order},#{label},#{hint},#{desc},#{faModuleId},#{show},#{deleted},#{code})
     </insert>
 
     <delete id="hardDelete" parameterType="String">
@@ -55,6 +55,9 @@
             <if test="show != null">
                 `show` = #{show},
             </if>
+            <if test="code != null">
+                `code` = #{code},
+            </if>
         </set>
         WHERE id = #{id}
     </update>
@@ -69,28 +72,31 @@
         <where>
             1 = 1
             <if test="order != null">
-                and `order` = #{order},
+                and `order` = #{order}
             </if>
             <if test="label != null">
-                and `label` = #{label},
+                and `label` = #{label}
             </if>
             <if test="faModuleId != null">
-                and `fa_module_id` = #{faModuleId},
+                and `fa_module_id` = #{faModuleId}
             </if>
             <if test="hint != null">
-                and `hint` = #{hint},
+                and `hint` = #{hint}
             </if>
             <if test="desc != null">
-                and `desc` = #{desc},
+                and `desc` = #{desc}
             </if>
             <if test="mtime != null">
-                and `mtime` = #{mtime},
+                and `mtime` = #{mtime}
             </if>
             <if test="deleted != null">
-                and deleted = #{deleted}
+                and `deleted` = #{deleted}
             </if>
             <if test="show != null">
-                and `show` = #{show},
+                and `show` = #{show}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
             </if>
         </where>
     </select>
@@ -100,28 +106,31 @@
         <where>
             1 = 1
             <if test="order != null">
-                and `order` = #{order},
+                and `order` = #{order}
             </if>
             <if test="label != null">
-                and `label` = #{label},
+                and `label` = #{label}
             </if>
             <if test="faModuleId != null">
-                and `fa_module_id` = #{faModuleId},
+                and `fa_module_id` = #{faModuleId}
             </if>
             <if test="hint != null">
-                and `hint` = #{hint},
+                and `hint` = #{hint}
             </if>
             <if test="desc != null">
-                and `desc` = #{desc},
+                and `desc` = #{desc}
             </if>
             <if test="mtime != null">
-                and `mtime` = #{mtime},
+                and `mtime` = #{mtime}
             </if>
             <if test="deleted != null">
-                and deleted = #{deleted}
+                and `deleted` = #{deleted}
             </if>
             <if test="show != null">
-                and `show` = #{show},
+                and `show` = #{show}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
             </if>
         </where>
     </select>

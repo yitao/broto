@@ -7,8 +7,8 @@
     </sql>
     
     <insert id="insert" parameterType="Action">
-        INSERT INTO<include refid="tableName"/>(id,ctime,`order`,label,`action`,hint,`desc`,`module_id`,`exclude`,`show`,`deleted`)
-        VALUES (#{id},#{ctime},#{order},#{label},#{action},#{hint},#{desc},#{moduleId},#{exclude},#{show},#{deleted})
+        INSERT INTO<include refid="tableName"/>(id,ctime,`order`,label,`action`,hint,`desc`,`module_id`,`exclude`,`show`,`deleted`,`code`)
+        VALUES (#{id},#{ctime},#{order},#{label},#{action},#{hint},#{desc},#{moduleId},#{exclude},#{show},#{deleted},#{code})
     </insert>
 
     <update id="update" parameterType="Action">
@@ -41,6 +41,9 @@
             <if test="show != null">
                 `show` = #{show},
             </if>
+            <if test="code != null">
+                `code` = #{code},
+            </if>
         </set>
         WHERE id = #{id}
     </update>
@@ -63,34 +66,37 @@
         <where>
             1 = 1
             <if test="order != null">
-                and `order` = #{order},
+                and `order` = #{order}
             </if>
             <if test="label != null">
-                and `label` = #{label},
+                and `label` = #{label}
             </if>
             <if test="action != null">
-                and `action` = #{action},
+                and `action` = #{action}
             </if>
             <if test="hint != null">
-                and `hint` = #{hint},
+                and `hint` = #{hint}
             </if>
             <if test="desc != null">
-                and `desc` = #{desc},
+                and `desc` = #{desc}
             </if>
             <if test="moduleId != null">
-                and `module_id` = #{moduleId},
+                and `module_id` = #{moduleId}
             </if>
             <if test="mtime != null">
-                and `mtime` = #{mtime},
+                and `mtime` = #{mtime}
             </if>
             <if test="exclude != null">
-                and `exclude` = #{exclude},
+                and `exclude` = #{exclude}
             </if>
             <if test="deleted != null">
                 and deleted = #{deleted}
             </if>
             <if test="show != null">
-                and `show` = #{show},
+                and `show` = #{show}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
             </if>
         </where>
     </select>
@@ -100,34 +106,37 @@
         <where>
             1 = 1
             <if test="order != null">
-                and `order` = #{order},
+                and `order` = #{order}
             </if>
             <if test="label != null">
-                and `label` = #{label},
+                and `label` = #{label}
             </if>
             <if test="action != null">
-                and `action` = #{action},
+                and `action` = #{action}
             </if>
             <if test="hint != null">
-                and `hint` = #{hint},
+                and `hint` = #{hint}
             </if>
             <if test="desc != null">
-                and `desc` = #{desc},
+                and `desc` = #{desc}
             </if>
             <if test="moduleId != null">
-                and `module_id` = #{moduleId},
+                and `module_id` = #{moduleId}
             </if>
             <if test="mtime != null">
-                and `mtime` = #{mtime},
+                and `mtime` = #{mtime}
             </if>
             <if test="exclude != null">
-                and `exclude` = #{exclude},
+                and `exclude` = #{exclude}
             </if>
             <if test="deleted != null">
                 and deleted = #{deleted}
             </if>
             <if test="show != null">
-                and `show` = #{show},
+                and `show` = #{show}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
             </if>
         </where>
     </select>

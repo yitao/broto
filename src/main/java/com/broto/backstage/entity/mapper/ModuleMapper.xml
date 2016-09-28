@@ -19,8 +19,8 @@
 
 
     <insert id="insert" parameterType="Module">
-        INSERT INTO <include refid="tableName"/>(id,ctime,`order`,label,hint,`desc`,`fa_module_id`,`show`,`deleted`)
-        VALUES (#{id},#{ctime},#{order},#{label},#{hint},#{desc},#{faModuleId},#{show},#{deleted})
+        INSERT INTO <include refid="tableName"/>(id,ctime,`order`,label,hint,`desc`,`fa_module_id`,`show`,`deleted`,`code`)
+        VALUES (#{id},#{ctime},#{order},#{label},#{hint},#{desc},#{faModuleId},#{show},#{deleted},#{code})
     </insert>
 
     <delete id="hardDelete" parameterType="String">
@@ -54,6 +54,9 @@
             </if>
             <if test="show != null">
                 `show` = #{show},
+            </if>
+            <if test="code != null">
+                `code` = #{code},
             </if>
         </set>
         WHERE id = #{id}
@@ -92,6 +95,9 @@
             <if test="show != null">
                 and `show` = #{show}
             </if>
+            <if test="code != null">
+                and `code` = #{code}
+            </if>
         </where>
     </select>
 
@@ -122,6 +128,9 @@
             </if>
             <if test="show != null">
                 and `show` = #{show}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
             </if>
         </where>
     </select>

@@ -7,8 +7,8 @@
     </sql>
     
     <insert id="insert" parameterType="Action">
-        INSERT INTO<include refid="tableName"/>(id,ctime,`order`,label,`action`,hint,`desc`,`module_id`,`exclude`,`show`,`deleted`)
-        VALUES (#{id},#{ctime},#{order},#{label},#{action},#{hint},#{desc},#{moduleId},#{exclude},#{show},#{deleted})
+        INSERT INTO<include refid="tableName"/>(id,ctime,`order`,label,`action`,hint,`desc`,`module_id`,`exclude`,`show`,`deleted`,`code`)
+        VALUES (#{id},#{ctime},#{order},#{label},#{action},#{hint},#{desc},#{moduleId},#{exclude},#{show},#{deleted},#{code})
     </insert>
 
     <update id="update" parameterType="Action">
@@ -40,6 +40,9 @@
             </if>
             <if test="show != null">
                 `show` = #{show},
+            </if>
+            <if test="code != null">
+                `code` = #{code},
             </if>
         </set>
         WHERE id = #{id}
@@ -90,7 +93,10 @@
                 and deleted = #{deleted}
             </if>
             <if test="show != null">
-                and `show` = #{show},
+                and `show` = #{show}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
             </if>
         </where>
     </select>
@@ -127,7 +133,10 @@
                 and deleted = #{deleted}
             </if>
             <if test="show != null">
-                and `show` = #{show},
+                and `show` = #{show}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
             </if>
         </where>
     </select>

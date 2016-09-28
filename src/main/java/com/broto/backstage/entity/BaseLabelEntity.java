@@ -8,6 +8,7 @@ public class BaseLabelEntity extends BaseDeletedDataEntity{
     String label;
     String hint;
     String desc;
+    long order;
 
     public BaseLabelEntity() {
     }
@@ -50,5 +51,13 @@ public class BaseLabelEntity extends BaseDeletedDataEntity{
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public long getOrder() {
+        return order;
+    }
+
+    public void setOrder(long order) {
+        this.order = order;
     }
 }

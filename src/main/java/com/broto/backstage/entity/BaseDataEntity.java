@@ -15,7 +15,6 @@ public class BaseDataEntity implements Serializable {
     protected String id;
     protected Date ctime = new Date();
     protected Date mtime;
-    protected long order;
 
     @Override
     public String toString() {
@@ -53,14 +52,6 @@ public class BaseDataEntity implements Serializable {
 
     public void setMtime(Date lmtime) {
         this.mtime = mtime;
-    }
-
-    public long getOrder() {
-        return order;
-    }
-
-    public void setOrder(long order) {
-        this.order = order;
     }
 
     public boolean isNew(){

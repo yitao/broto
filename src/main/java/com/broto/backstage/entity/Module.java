@@ -13,14 +13,16 @@ public class Module extends BaseLabelEntity implements Cloneable{
     @Transient
     int state;
     boolean show;
+    String code;
 
     public Module() {
     }
 
-    public Module(long order, String icon, String label, String hint, String desc, String faModuleId, boolean show) {
+    public Module(long order, String icon, String label, String hint, String desc, String faModuleId, boolean show,String code) {
         super(order, icon, label, hint, desc);
         this.faModuleId = faModuleId;
         this.show = show;
+        this.code = code;
     }
 
     @Transient
@@ -70,9 +72,17 @@ public class Module extends BaseLabelEntity implements Cloneable{
         this.show = show;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     @Override
     public Module clone() {
-        Module module = new Module( order, icon, label,  hint, desc, faModuleId, show);
+        Module module = new Module( order, icon, label,  hint, desc, faModuleId, show,code);
         if(this.actions!=null){
             List<Action> nas = new ArrayList<>();
             for(Action a : this.actions){

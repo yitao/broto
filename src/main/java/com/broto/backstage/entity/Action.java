@@ -13,16 +13,18 @@ public class Action extends BaseLabelEntity implements Cloneable {
     @Transient
     int state;//勾选状态
     boolean show;
+    String code;
 
     public Action() {
     }
 
-    public Action(long order, String icon, String label, String hint, String desc, String moduleId, String action, boolean exclude,boolean show) {
+    public Action(long order, String icon, String label, String hint, String desc, String moduleId, String action, boolean exclude,boolean show,String code) {
         super(order, icon, label,  hint, desc);
         this.moduleId = moduleId;
         this.action = action;
         this.exclude = exclude;
         this.show = show;
+        this.code = code;
     }
 
     public String getModuleId() {
@@ -65,9 +67,17 @@ public class Action extends BaseLabelEntity implements Cloneable {
         this.show = show;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     @Override
     public Action clone() {
-        Action a = new Action(order, icon, label, hint, desc, moduleId, action, exclude,show);
+        Action a = new Action(order, icon, label, hint, desc, moduleId, action, exclude,show,code);
         return a;
     }
 }
