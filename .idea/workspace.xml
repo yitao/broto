@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f982f35-200b-4288-921b-514974468131" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/broto/service/PermissionServiceTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/entity/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/AccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ActionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/ModuleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/PermissionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/PermissionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/RoleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/broto/backstage/service/RoleService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/broto/service/ActionServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/broto/service/ActionServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/broto/service/RoleServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/broto/service/RoleServiceTest.java" />
     </list>
     <ignored path="broto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1474,7 +1465,7 @@
       <workItem from="1474515052623" duration="655000" />
       <workItem from="1474870877059" duration="9691000" />
       <workItem from="1475026286136" duration="10067000" />
-      <workItem from="1475059940783" duration="4933000" />
+      <workItem from="1475059940783" duration="4941000" />
     </task>
     <task id="LOCAL-00001" summary="code1">
       <created>1469524886271</created>
@@ -1542,7 +1533,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475063352815</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="permission">
+      <created>1475064882601</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1475064882601</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1578,10 +1575,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62849000" />
+    <option name="totallyTimeSpent" value="62857000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1932" height="1056" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
