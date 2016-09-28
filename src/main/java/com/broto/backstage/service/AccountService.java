@@ -20,45 +20,49 @@ public class AccountService {
     private AccountDao accountDao;
 
     //保存（插入或者更新）
-    public void save(Account account){
+    public void save(Account account) {
         accountDao.save(account);
     }
 
     //删除
-    public void delete(String accountId,boolean isHardDelete){
-        if(StringUtils.isNotBlank(accountId)){
-            accountDao.delete(accountId,isHardDelete);
+    public void delete(String accountId, boolean isHardDelete) {
+        if (StringUtils.isNotBlank(accountId)) {
+            accountDao.delete(accountId, isHardDelete);
         }
     }
 
     //查询
-    public List<Account> findAll(Boolean deleted){
-        Map<String,Object> query = new HashMap<>();
-        if(deleted!=null) {
+    public List<Account> findAll(Boolean deleted) {
+        Map<String, Object> query = new HashMap<>();
+        if (deleted != null) {
             query.put("deleted", deleted);
         }
         List<Account> result = accountDao.findAllByMap(query);
         return result;
     }
 
-
-    public Account findOneByCode(String code){
-        Map<String,Object> query = new HashMap<>();
+    public List<Account> findAllByCode(String code) {
+        Map<String, Object> query = new HashMap<>();
         query.put("code", code);
         List<Account> result = accountDao.findAllByMap(query);
-        if(CollectionUtils.isNotEmpty(result)){
+        return result;
+    }
+
+    public Account findOneByCode(String code) {
+        List<Account> result = findAllByCode(code);
+        if (CollectionUtils.isNotEmpty(result)) {
             return result.get(0);
         }
         return null;
     }
 
     public Account findOneByAccount(String account) {
-        Map<String,Object> query = new HashMap<>();
-        query.put("account",account);
+        Map<String, Object> query = new HashMap<>();
+        query.put("account", account);
         List<Account> accountList = accountDao.findAllByMap(query);
-        if(CollectionUtils.isEmpty(accountList)){
+        if (CollectionUtils.isEmpty(accountList)) {
             return null;
-        }else{
+        } else {
             return accountList.get(0);
         }
     }

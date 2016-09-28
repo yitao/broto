@@ -24,49 +24,55 @@ public class ModuleService {
     private ActionService actionService;
 
     //保存（插入或者更新）
-    public void save(Module module){
-       moduleDao.save(module);
+    public void save(Module module) {
+        moduleDao.save(module);
     }
 
     //删除
-    public void delete(String moduleId,boolean isHardDelete){
-        if(StringUtils.isNotBlank(moduleId)){
-            moduleDao.delete(moduleId,isHardDelete);
+    public void delete(String moduleId, boolean isHardDelete) {
+        if (StringUtils.isNotBlank(moduleId)) {
+            moduleDao.delete(moduleId, isHardDelete);
         }
     }
 
 
-    public Module findOneByCode(String code){
-        Map<String,Object> query = new HashMap<>();
+    public List<Module> findAllByCode(String code) {
+        Map<String, Object> query = new HashMap<>();
         query.put("code", code);
         List<Module> result = moduleDao.findAllByMap(query);
-        if(CollectionUtils.isNotEmpty(result)){
+        return result;
+    }
+
+
+    public Module findOneByCode(String code) {
+        List<Module> result = findAllByCode(code);
+        if (CollectionUtils.isNotEmpty(result)) {
             return result.get(0);
         }
         return null;
     }
 
     //查询
-    public List<Module> findAll(){
-        return findAll(null,null);
+    public List<Module> findAll() {
+        return findAll(null, null);
     }
 
-    public List<Module> findAll(Boolean show,Boolean deleted){
-        Map<String,Object> query = new HashMap<>();
-        if(show!=null) {
+    public List<Module> findAll(Boolean show, Boolean deleted) {
+        Map<String, Object> query = new HashMap<>();
+        if (show != null) {
             query.put("show", show);
         }
-        if(deleted!=null) {
+        if (deleted != null) {
             query.put("deleted", deleted);
         }
         List<Module> result = moduleDao.findAllByMap(query);
         return result;
     }
 
-    public List<Module> findAllModuleAndAction(Boolean show,Boolean deleted){
-        List<Module> modules = findAll(show,deleted);
-        for(Module module : modules ){
-            List<Action> actions = actionService.findAll(module.getId(),show,deleted);
+    public List<Module> findAllModuleAndAction(Boolean show, Boolean deleted) {
+        List<Module> modules = findAll(show, deleted);
+        for (Module module : modules) {
+            List<Action> actions = actionService.findAll(module.getId(), show, deleted);
             module.setActions(actions);
         }
         return modules;

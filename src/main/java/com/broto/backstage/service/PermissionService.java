@@ -30,33 +30,36 @@ public class PermissionService {
     @Autowired
     private ActionService actionService;
 
-    public void saveAR(String accountId, String roleId) {
+    public AR saveAR(String accountId, String roleId) {
         AR ar = new AR(accountId, roleId);
         arDao.insert(ar);
+        return ar;
     }
 
     public void deleteAR(String accountId, String roleId) {
         AR ar = new AR(accountId, roleId);
         arDao.delete(ar);
     }
+
     public void deleteAR(String accountId) {
         arDao.deleteByAccountId(accountId);
     }
 
-    public void saveRMA(String roleId, String moduleId, String actionId) {
+    public RMA saveRMA(String roleId, String moduleId, String actionId) {
         RMA rma = new RMA(roleId, moduleId, actionId);
         rmaDao.insert(rma);
+        return rma;
     }
 
     public void saveRM(String roleId, String moduleId) {
-        for (Action action : actionService.findAll(moduleId,null,null)) {
+        for (Action action : actionService.findAll(moduleId, null, null)) {
             String actionId = action.getId();
             saveRMA(roleId, moduleId, actionId);
         }
     }
 
-    public void deleteRM(String roleId, String moduleId) {
-        for (Action action : actionService.findAll(moduleId,null,null)) {
+    public void deleteRMAByRM(String roleId, String moduleId) {
+        for (Action action : actionService.findAll(moduleId, null, null)) {
             String actionId = action.getId();
             deleteRMA(roleId, moduleId, actionId);
         }
@@ -67,9 +70,23 @@ public class PermissionService {
         rmaDao.delete(rma);
     }
 
-    public void saveR2R(String roleId, String openedRoleId) {
+    public void deleteRMAByRoleId(String roleId){
+        rmaDao.deleteByRoleId(roleId);
+    }
+
+    public void deleteRMAByModuleId(String moduleId){
+        rmaDao.deleteByModuleId(moduleId);
+    }
+
+    public void deleteRMAByActionId(String actionId){
+        rmaDao.deleteByActionId(actionId);
+    }
+
+
+    public R2R saveR2R(String roleId, String openedRoleId) {
         R2R r2r = new R2R(roleId, openedRoleId);
         r2rDao.insert(r2r);
+        return r2r;
     }
 
     public void deleteR2R(String roleId, String openedRoleId) {
@@ -77,20 +94,21 @@ public class PermissionService {
         r2rDao.delete(r2r);
     }
 
-    public void saveR2MA(String roleId, String moduleId, String actionId) {
+    public R2MA saveR2MA(String roleId, String moduleId, String actionId) {
         R2MA r2ma = new R2MA(roleId, moduleId, actionId);
         r2maDao.insert(r2ma);
+        return r2ma;
     }
 
     public void saveR2M(String roleId, String moduleId) {
-        for (Action action : actionService.findAll(moduleId,null,null)) {
+        for (Action action : actionService.findAll(moduleId, null, null)) {
             String actionId = action.getId();
             saveR2MA(roleId, moduleId, actionId);
         }
     }
 
     public void deleteR2M(String roleId, String moduleId) {
-        for (Action action : actionService.findAll(moduleId,null,null)) {
+        for (Action action : actionService.findAll(moduleId, null, null)) {
             String actionId = action.getId();
             deleteR2MA(roleId, moduleId, actionId);
         }
@@ -110,21 +128,21 @@ public class PermissionService {
     }
 
     //查询当前用户所有角色
-    public List<Role> findAllRoleByAccountId(String accountId){
+    public List<Role> findAllRoleByAccountId(String accountId) {
         List<Role> result = new ArrayList<>();
         //TODO
         return result;
     }
 
     //查询当前用户角色所有可见角色
-    public List<Role> findAllOpenedRoleByAccountId(String accountId){
+    public List<Role> findAllOpenedRoleByAccountId(String accountId) {
         List<Role> result = new ArrayList<>();
         //TODO
         return result;
     }
 
     //查询当前用户角色所有可见模块，功能
-    public List<Module> findAllMA4Opened(String roleId){
+    public List<Module> findAllMA4Opened(String roleId) {
         List<Module> result = new ArrayList<>();
         return result;
     }
@@ -166,29 +184,29 @@ public class PermissionService {
         boolean buildIn = false;
         List<Role> ownerRoles = findAllRoleByAccountId(userId);
         Role owner = null;
-        if(ownerRoles.size()>0){
+        if (ownerRoles.size() > 0) {
             owner = ownerRoles.get(0);
         }
-        for(Role role : ownerRoles){
-            if(role.isAp()){
+        for (Role role : ownerRoles) {
+            if (role.isAp()) {
                 buildIn = true;
                 break;
             }
         }
         List<Role> roles = null;
         List<Module> modules = null;
-        if(buildIn){
+        if (buildIn) {
             roles = roleService.findAll();
             modules = moduleService.findAll();
-        }else{
+        } else {
             //查询当前用户角色所有可见角色
-            roles =  findAllOpenedRoleByAccountId(userId);
+            roles = findAllOpenedRoleByAccountId(userId);
             //查询当前用户角色所有可见模块，功能
-            modules =  findAllMA4Opened(owner.getId());
+            modules = findAllMA4Opened(owner.getId());
         }
         int maCheckCount = 0;
         for (Role role : roles) {
-            if(null == role) continue;
+            if (null == role) continue;
             List<Module> nmodules = new ArrayList<>();
             String roleId = role.getId();
             List<RMA> rmas = rmaDao.findAllByRoleId(roleId);

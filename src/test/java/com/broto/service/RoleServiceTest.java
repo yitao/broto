@@ -27,7 +27,7 @@ public class RoleServiceTest extends AbstractJUnit4SpringContextTests {
 
     @Test
     public void testSave(){
-        Role role = new Role("测试员","测试员","TEST",false,false);
+        Role role = new Role("测试员2","测试员2","TEST2",false,false);
         roleService.save(role);
         System.out.println();
         System.out.println(role.getId());

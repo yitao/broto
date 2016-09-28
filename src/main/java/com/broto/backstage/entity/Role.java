@@ -50,13 +50,6 @@ public class Role extends BaseDeletedDataEntity {
         this.desc = desc;
     }
 
-    public boolean getInuse() {
-        return inuse;
-    }
-
-    public void setInuse(boolean inuse) {
-        this.inuse = inuse;
-    }
 
     public List<Module> getModules() {
         return modules;
@@ -100,6 +93,10 @@ public class Role extends BaseDeletedDataEntity {
 
     public boolean isInuse() {
         return inuse;
+    }
+
+    public void setInuse(boolean inuse) {
+        this.inuse = inuse;
     }
 
     public boolean isAp() {

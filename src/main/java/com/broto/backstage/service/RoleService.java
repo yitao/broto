@@ -19,39 +19,44 @@ import java.util.Map;
 public class RoleService {
     @Autowired
     private RoleDao roleDao;
-    
+
     //保存（插入或者更新）
-    public void save(Role role){
+    public void save(Role role) {
         roleDao.save(role);
     }
 
     //删除
-    public void delete(String roleId,boolean isHardDelete){
-        if(StringUtils.isNotBlank(roleId)){
-            roleDao.delete(roleId,isHardDelete);
+    public void delete(String roleId, boolean isHardDelete) {
+        if (StringUtils.isNotBlank(roleId)) {
+            roleDao.delete(roleId, isHardDelete);
         }
     }
 
     //查询
-    public List<Role> findAll(){
+    public List<Role> findAll() {
         return findAll(null);
     }
 
-    public List<Role> findAll(Boolean deleted){
-        Map<String,Object> query = new HashMap<>();
-        if(deleted!=null) {
+    public List<Role> findAll(Boolean deleted) {
+        Map<String, Object> query = new HashMap<>();
+        if (deleted != null) {
             query.put("deleted", deleted);
         }
         List<Role> result = roleDao.findAllByMap(query);
         return result;
     }
 
-
-    public Role findOneByCode(String code){
-        Map<String,Object> query = new HashMap<>();
+    public List<Role> findAllByCode(String code) {
+        Map<String, Object> query = new HashMap<>();
         query.put("code", code);
         List<Role> result = roleDao.findAllByMap(query);
-        if(CollectionUtils.isNotEmpty(result)){
+        return result;
+    }
+
+
+    public Role findOneByCode(String code) {
+        List<Role> result = findAllByCode(code);
+        if (CollectionUtils.isNotEmpty(result)) {
             return result.get(0);
         }
         return null;

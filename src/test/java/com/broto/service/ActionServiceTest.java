@@ -25,7 +25,7 @@ public class ActionServiceTest extends AbstractJUnit4SpringContextTests {
     public void testSave(){
         Module module = moduleService.findOneByCode("TEST");
         String moduleId= module==null?"":module.getId();
-        Action action = new Action(0,"","action2","","",moduleId,"/test",false,true,"");
+        Action action = new Action(0,"","action3","","",moduleId,"/test3",false,true,"");
         actionService.save(action);
         System.out.println();
         System.out.println(action.getId());
