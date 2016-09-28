@@ -47,6 +47,10 @@ public class ModuleService {
     }
 
     //查询
+    public List<Module> findAll(){
+        return findAll(null,null);
+    }
+
     public List<Module> findAll(Boolean show,Boolean deleted){
         Map<String,Object> query = new HashMap<>();
         if(show!=null) {

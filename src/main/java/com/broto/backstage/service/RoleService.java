@@ -33,6 +33,10 @@ public class RoleService {
     }
 
     //查询
+    public List<Role> findAll(){
+        return findAll(null);
+    }
+
     public List<Role> findAll(Boolean deleted){
         Map<String,Object> query = new HashMap<>();
         if(deleted!=null) {

@@ -97,4 +97,22 @@ public class Role extends BaseDeletedDataEntity {
     public void setCode(String code) {
         this.code = code;
     }
+
+    public boolean isInuse() {
+        return inuse;
+    }
+
+    public boolean isAp() {
+        return ap;
+    }
+
+    public void setAp(boolean ap) {
+        this.ap = ap;
+    }
+
+    @Override
+    public Role clone() {
+        Role role = new Role(id,name,desc,inuse,ap);
+        return role;
+    }
 }
