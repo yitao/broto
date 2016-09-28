@@ -3,22 +3,19 @@ package com.broto.backstage.entity;
 /**
  * Created by yitao on 2016/5/11.
  */
-public class BaseLabelEntity extends BaseDataEntity{
+public class BaseLabelEntity extends BaseDeletedDataEntity{
     String icon;
     String label;
-    String value;
     String hint;
     String desc;
 
     public BaseLabelEntity() {
     }
 
-    public BaseLabelEntity(String id,Long order,String icon, String label, String value, String hint, String desc) {
-        this.id = id;
+    public BaseLabelEntity(long order,String icon, String label, String hint, String desc) {
         this.order = order;
         this.icon = icon;
         this.label = label;
-        this.value = value;
         this.hint = hint;
         this.desc = desc;
     }
@@ -37,14 +34,6 @@ public class BaseLabelEntity extends BaseDataEntity{
 
     public void setLabel(String label) {
         this.label = label;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
     }
 
     public String getHint() {

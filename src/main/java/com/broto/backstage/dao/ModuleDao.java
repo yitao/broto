@@ -7,6 +7,4 @@ import com.broto.backstage.entity.Module;
  */
 public interface ModuleDao extends BaseSqlDao<Module, String>{
 
-    Module findDefault();
-
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by yitao on 2016/5/19.
  */
-@Repository("P_ARDaoImpl")
+@Repository
 public class ARDaoImpl extends BaseSqlDaoImpl<AR, String> implements ARDao {
 
     @Override

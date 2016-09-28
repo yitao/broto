@@ -2,13 +2,14 @@ package com.broto.backstage.dao.mybatis;
 
 import com.broto.backstage.dao.BaseSqlDao;
 import com.broto.backstage.entity.BaseDataEntity;
-import org.apache.commons.lang3.StringUtils;
+import com.broto.backstage.util.IDUtils;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
 import java.lang.reflect.ParameterizedType;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -19,17 +20,18 @@ import java.util.UUID;
  */
 public class BaseSqlDaoImpl<T extends BaseDataEntity, PK extends String> extends SqlSessionDaoSupport implements BaseSqlDao<T, PK> {
 
-    public static final String SQL_GET_BY_ID = "getById";
-    public static final String SQL_GET_BY_MAP = "getByMap";
-    public static final String SQL_FIND_ALL = "findAll";
-    public static final String SQL_FIND_BY_MAP = "findByMap";
     public static final String SQL_INSERT = "insert";
+
+    public static final String SQL_HARD_DELETE_BY_ID = "hardDelete";
+    public static final String SQL_NO_HARD_DELETE_BY_ID = "noHardDelete";
+
     public static final String SQL_UPDATE = "update";
     public static final String SQL_UPDATE_BY_MAP = "updateByMap";
-    public static final String SQL_DELETE_BY_ID = "deleteById";
-    public static final String SQL_SOFT_DELETE_BY_ID = "softDeleteById";
-    public static final String SQL_COUNT = "count";
-    public static final String SQL_COUNT_BY_MAP = "countByMap";
+
+    public static final String SQL_FIND_BY_ID = "findById";
+    public static final String SQL_FIND_BY_MAP = "findAllByMap";
+    public static final String SQL_COUNT_BY_MAP = "countAllByMap";
+
     // 批量操作：修改和假删除
     public static final String SQL_BATCH_OPT = "batchOpt";
     // 批量插入
@@ -56,87 +58,61 @@ public class BaseSqlDaoImpl<T extends BaseDataEntity, PK extends String> extends
         super.setSqlSessionTemplate(sqlSessionTemplate);
     }
 
-    @Override
-    public T get(String id) {
-        if (StringUtils.isBlank(id)) {
-            return null;
-        }
-        return getSqlSession().selectOne(className + "." + SQL_GET_BY_ID, id);
+    public String sql(String s){
+        return className + "." + s;
     }
 
-    @Override
-    public T get(Map<String, Object> query) {
-        return getSqlSession().selectOne(className + "." + SQL_GET_BY_MAP, query);
-    }
 
     @Override
-    public List<T> findAll() {
-        return findAll(false);
+    public void insert(T entity) {
+        getSqlSession().insert(sql(SQL_INSERT), entity);
     }
 
-    @Override
-    public List<T> findAll(Boolean deleted) {
-        return getSqlSession().selectList(className + "." + SQL_FIND_ALL, deleted);
-    }
 
     @Override
     public void save(T entity) {
         if (entity.isNew()) {
-            entity.setId(UUID.randomUUID().toString());
+            entity.setId(IDUtils.genUUID32());
             insert(entity);
         } else {
             update(entity);
         }
     }
 
-    @Override
-    public void insert(T entity) {
-        getSqlSession().insert(className + "." + SQL_INSERT, entity);
-    }
 
     @Override
     public void update(T entity) {
-        getSqlSession().update(className + "." + SQL_UPDATE, entity);
+        getSqlSession().update(sql(SQL_UPDATE), entity);
     }
 
     @Override
     public void delete(PK id, boolean isHardDelete) {
-        if (!isHardDelete) {
-            delete(id);
-        } else {
-            getSqlSession().delete(className + "." + SQL_DELETE_BY_ID, id);
+        if(isHardDelete){
+            hardDelete(id);
+        }else{
+            getSqlSession().update(sql(SQL_NO_HARD_DELETE_BY_ID),id);
         }
     }
 
     @Override
-    public Long count(Boolean deleted) {
-        return null;
+    public void hardDelete(PK id) {
+        getSqlSession().delete(sql(SQL_HARD_DELETE_BY_ID),id);
     }
 
     @Override
-    public void delete(PK id) {
-        getSqlSession().update(className + "." + SQL_SOFT_DELETE_BY_ID, id);
+    public T findById(PK id) {
+        return getSqlSession().selectOne(sql(SQL_FIND_BY_ID),id);
     }
 
     @Override
-    public Long count() {
-        return getSqlSession().selectOne(className + "." + SQL_COUNT);
+    public List<T> findAllByMap(Map<String, Object> query) {
+        query = query==null?new HashMap<String,Object>():query;
+        return getSqlSession().selectList(sql(SQL_FIND_BY_MAP),query);
     }
 
     @Override
-    public Long count(Map<String, Object> query) {
-        return getSqlSession().selectOne(className + "." + SQL_COUNT_BY_MAP, query);
+    public long countAllByMap(Map<String, Object> query) {
+        query = query==null?new HashMap<String,Object>():query;
+        return getSqlSession().selectOne(sql(SQL_COUNT_BY_MAP),query);
     }
-
-    /**
-     * 仅用于后台分页管理查询
-     *
-     * @param query
-     * @return
-     */
-    @Override
-    public List<T> find(Map<String, Object> query) {
-        return getSqlSession().selectList(className + "." + SQL_FIND_BY_MAP, query);
-    }
-
 }

@@ -7,8 +7,8 @@
     </sql>
     
     <insert id="insert" parameterType="Action">
-        INSERT INTO<include refid="tableName"/>(id,ctime,`order`,label,`value`,`action`,hint,`desc`,module_id,exclude)
-        VALUES (#{id},#{ctime},#{order},#{label},#{value},#{action},#{hint},#{desc},#{moduleId},#{exclude})
+        INSERT INTO<include refid="tableName"/>(id,ctime,`order`,label,`action`,hint,`desc`,`module_id`,`exclude`,`show`,`deleted`)
+        VALUES (#{id},#{ctime},#{order},#{label},#{action},#{hint},#{desc},#{moduleId},#{exclude},#{show},#{deleted})
     </insert>
 
     <update id="update" parameterType="Action">
@@ -19,9 +19,6 @@
             </if>
             <if test="label != null">
                 `label` = #{label},
-            </if>
-            <if test="value != null">
-                `value` = #{value},
             </if>
             <if test="action != null">
                 `action` = #{action},
@@ -41,36 +38,99 @@
             <if test="exclude != null">
                 `exclude` = #{exclude},
             </if>
+            <if test="show != null">
+                `show` = #{show},
+            </if>
         </set>
         WHERE id = #{id}
     </update>
 
-    <delete id="deleteById" parameterType="String">
+    <delete id="hardDelete" parameterType="String">
         DELETE FROM <include refid="tableName"/> WHERE id = #{id}
     </delete>
 
-    <update id="resetAllByModuleId" parameterType="String">
-        UPDATE <include refid="tableName"/> SET module_id="" WHERE module_id = #{moduleId}
+    <update id="noHardDelete" parameterType="String">
+        UPDATE <include refid="tableName"/>  <set>deleted=true</set> WHERE id = #{id}
     </update>
 
-    <select id="findAll" resultType="Action">
-        SELECT * FROM <include refid="tableName"/>
+
+    <select id="findById" parameterType="String" resultType="Action">
+        select * from <include refid="tableName"/> where id = #{id}
     </select>
 
-    <select id="getById" parameterType="String" resultType="Action">
-        SELECT * FROM <include refid="tableName"/> WHERE id = #{id}
+    <select id="findAllByMap" parameterType="java.util.Map" resultType="Action">
+        select * from <include refid="tableName"/>
+        <where>
+            1 = 1
+            <if test="order != null">
+                and `order` = #{order},
+            </if>
+            <if test="label != null">
+                and `label` = #{label},
+            </if>
+            <if test="action != null">
+                and `action` = #{action},
+            </if>
+            <if test="hint != null">
+                and `hint` = #{hint},
+            </if>
+            <if test="desc != null">
+                and `desc` = #{desc},
+            </if>
+            <if test="moduleId != null">
+                and `module_id` = #{moduleId},
+            </if>
+            <if test="mtime != null">
+                and `mtime` = #{mtime},
+            </if>
+            <if test="exclude != null">
+                and `exclude` = #{exclude},
+            </if>
+            <if test="deleted != null">
+                and deleted = #{deleted}
+            </if>
+            <if test="show != null">
+                and `show` = #{show},
+            </if>
+        </where>
     </select>
 
-    <select id="findAllByModuleId" parameterType="String" resultType="Action">
-        SELECT * FROM <include refid="tableName"/> WHERE module_id = #{moduleId}
+    <select id="countAllByMap" parameterType="java.util.Map" resultType="long">
+        select count(*) from <include refid="tableName"/>
+        <where>
+            1 = 1
+            <if test="order != null">
+                and `order` = #{order},
+            </if>
+            <if test="label != null">
+                and `label` = #{label},
+            </if>
+            <if test="action != null">
+                and `action` = #{action},
+            </if>
+            <if test="hint != null">
+                and `hint` = #{hint},
+            </if>
+            <if test="desc != null">
+                and `desc` = #{desc},
+            </if>
+            <if test="moduleId != null">
+                and `module_id` = #{moduleId},
+            </if>
+            <if test="mtime != null">
+                and `mtime` = #{mtime},
+            </if>
+            <if test="exclude != null">
+                and `exclude` = #{exclude},
+            </if>
+            <if test="deleted != null">
+                and deleted = #{deleted}
+            </if>
+            <if test="show != null">
+                and `show` = #{show},
+            </if>
+        </where>
     </select>
 
-    <select id="findOneByAction" parameterType="String" resultType="Action">
-        SELECT * FROM <include refid="tableName"/> WHERE `action` = #{action}
-    </select>
-
-    <delete id="deleteAllByModuleId" parameterType="String">
-        DELETE <include refid="tableName"/> WHERE module_id = #{moduleId}
-    </delete>
 
 </mapper>

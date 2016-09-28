@@ -12,11 +12,10 @@ import java.util.Date;
  */
 public class BaseDataEntity implements Serializable {
     @Id
-    String id;
-    Date ctime = new Date();
-    Date mtime;
-    Long order;
-    Boolean show;
+    protected String id;
+    protected Date ctime = new Date();
+    protected Date mtime;
+    protected long order;
 
     @Override
     public String toString() {
@@ -56,7 +55,7 @@ public class BaseDataEntity implements Serializable {
         this.mtime = mtime;
     }
 
-    public Long getOrder() {
+    public long getOrder() {
         return order;
     }
 

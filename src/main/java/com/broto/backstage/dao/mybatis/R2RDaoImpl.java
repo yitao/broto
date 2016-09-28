@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by yitao on 2016/5/19.
  */
-@Repository("P_R2RDaoImpl")
+@Repository
 public class R2RDaoImpl extends BaseSqlDaoImpl<R2R,String> implements R2RDao {
     @Override
     public void deleteByRoleId(String roleId) {

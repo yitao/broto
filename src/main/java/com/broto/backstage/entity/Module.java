@@ -10,18 +10,17 @@ import java.util.List;
  */
 public class Module extends BaseLabelEntity implements Cloneable{
     String faModuleId;
-    boolean isDefault;
+    @Transient
     int state;
     boolean show;
 
     public Module() {
     }
 
-    public Module(String id, Long order, String icon, String label, String value, String hint, String desc, String faModuleId, boolean isDefault, int state) {
-        super(id, order, icon, label, value, hint, desc);
+    public Module(long order, String icon, String label, String hint, String desc, String faModuleId, boolean show) {
+        super(order, icon, label, hint, desc);
         this.faModuleId = faModuleId;
-        this.isDefault = isDefault;
-        this.state = state;
+        this.show = show;
     }
 
     @Transient
@@ -53,13 +52,7 @@ public class Module extends BaseLabelEntity implements Cloneable{
         this.actions = actions;
     }
 
-    public boolean isDefault() {
-        return isDefault;
-    }
 
-    public void setDefault(boolean aDefault) {
-        isDefault = aDefault;
-    }
 
     public int getState() {
         return state;
@@ -79,7 +72,7 @@ public class Module extends BaseLabelEntity implements Cloneable{
 
     @Override
     public Module clone() {
-        Module module = new Module(id, order, icon, label, value, hint, desc, faModuleId,  isDefault,  state);
+        Module module = new Module( order, icon, label,  hint, desc, faModuleId, show);
         if(this.actions!=null){
             List<Action> nas = new ArrayList<>();
             for(Action a : this.actions){

@@ -11,7 +11,4 @@ public interface ActionDao extends BaseSqlDao<Action, String>{
 
     List<Action> findAllByModuleId(String moduleId);
 
-    Action findOneByAction(String action);
-
-    void resetAllByModuleId(String moduleId);
 }

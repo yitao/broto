@@ -19,9 +19,17 @@
 
 
     <insert id="insert" parameterType="Module">
-        INSERT INTO <include refid="tableName"/>(id,ctime,`order`,label,`value`,hint,`desc`,fa_module_id,is_default)
-        VALUES (#{id},#{ctime},#{order},#{label},#{value},#{hint},#{desc},#{faModuleId},#{isDefault})
+        INSERT INTO <include refid="tableName"/>(id,ctime,`order`,label,hint,`desc`,`fa_module_id`,`show`,`deleted`)
+        VALUES (#{id},#{ctime},#{order},#{label},#{hint},#{desc},#{faModuleId},#{show},#{deleted})
     </insert>
+
+    <delete id="hardDelete" parameterType="String">
+        DELETE FROM <include refid="tableName"/> WHERE id = #{id}
+    </delete>
+
+    <update id="noHardDelete" parameterType="String">
+        UPDATE <include refid="tableName"/>  <set>deleted=true</set> WHERE id = #{id}
+    </update>
 
     <update id="update" parameterType="Module">
         UPDATE <include refid="tableName"/>
@@ -32,9 +40,6 @@
             <if test="label != null">
                 `label` = #{label},
             </if>
-            <if test="value != null">
-                `value` = #{value},
-            </if>
             <if test="faModuleId != null">
                 `fa_module_id` = #{faModuleId},
             </if>
@@ -44,31 +49,81 @@
             <if test="desc != null">
                 `desc` = #{desc},
             </if>
-            <if test="isDefault != null">
-                `is_default` = #{isDefault},
-            </if>
             <if test="mtime != null">
                 `mtime` = #{mtime},
+            </if>
+            <if test="show != null">
+                `show` = #{show},
             </if>
         </set>
         WHERE id = #{id}
     </update>
 
-    <delete id="deleteById" parameterType="String">
-        DELETE FROM <include refid="tableName"/> WHERE id = #{id}
-    </delete>
 
-    <select id="findAll" resultType="Module">
-        SELECT * FROM <include refid="tableName"/>
+    <select id="findById" parameterType="String" resultType="Module">
+        select * from <include refid="tableName"/> where id = #{id}
     </select>
 
-    <select id="getById" parameterType="String" resultType="Module">
-        SELECT * FROM <include refid="tableName"/> WHERE id = #{id}
+    <select id="findAllByMap" parameterType="java.util.Map" resultType="Module">
+        select * from <include refid="tableName"/>
+        <where>
+            1 = 1
+            <if test="order != null">
+                and `order` = #{order},
+            </if>
+            <if test="label != null">
+                and `label` = #{label},
+            </if>
+            <if test="faModuleId != null">
+                and `fa_module_id` = #{faModuleId},
+            </if>
+            <if test="hint != null">
+                and `hint` = #{hint},
+            </if>
+            <if test="desc != null">
+                and `desc` = #{desc},
+            </if>
+            <if test="mtime != null">
+                and `mtime` = #{mtime},
+            </if>
+            <if test="deleted != null">
+                and deleted = #{deleted}
+            </if>
+            <if test="show != null">
+                and `show` = #{show},
+            </if>
+        </where>
     </select>
 
-
-    <select id="findDefault" resultType="Module">
-        select * from <include refid="tableName"/> where is_default = 1 limit 0,1
+    <select id="countAllByMap" parameterType="java.util.Map" resultType="Module">
+        select count(*) from <include refid="tableName"/>
+        <where>
+            1 = 1
+            <if test="order != null">
+                and `order` = #{order},
+            </if>
+            <if test="label != null">
+                and `label` = #{label},
+            </if>
+            <if test="faModuleId != null">
+                and `fa_module_id` = #{faModuleId},
+            </if>
+            <if test="hint != null">
+                and `hint` = #{hint},
+            </if>
+            <if test="desc != null">
+                and `desc` = #{desc},
+            </if>
+            <if test="mtime != null">
+                and `mtime` = #{mtime},
+            </if>
+            <if test="deleted != null">
+                and deleted = #{deleted}
+            </if>
+            <if test="show != null">
+                and `show` = #{show},
+            </if>
+        </where>
     </select>
 
 </mapper>

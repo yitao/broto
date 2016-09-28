@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by yitao on 2016/5/19.
  */
-@Repository("P_R2MADaoImpl")
+@Repository
 public class R2MADaoImpl extends BaseSqlDaoImpl<R2MA,String> implements R2MADao {
 
     public List<R2MA> findAllByRoleId(String roleId){

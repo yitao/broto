@@ -6,8 +6,8 @@
         bro_account
     </sql>
     <insert id="insert" parameterType="Account">
-        INSERT  INTO <include refid="tableName"/>(id,ctime,`order`,account,password,inuse)
-        VALUES (#{id},#{ctime},#{order},#{account},#{password},#{inuse})
+        INSERT  INTO <include refid="tableName"/>(id,ctime,`order`,account,password,inuse,code)
+        VALUES (#{id},#{ctime},#{order},#{account},#{password},#{inuse},#{code})
     </insert>
 
     <delete id="deleteById" parameterType="String">
@@ -37,6 +37,9 @@
             <if test="inuse != null">
                 inuse = #{inuse},
             </if>
+            <if test="code != null">
+                code = #{code},
+            </if>
         </set>
         WHERE id=#{id}
     </update>
@@ -49,19 +52,13 @@
             <if test="account != null">
                 and account = #{account}
             </if>
-            <if test="password != password">
-                and ctime = #{ctime}
-            </if>
             <if test="inuse != inuse">
                 and inuse = #{inuse}
             </if>
-
+            <if test="code != inuse">
+                and code = #{code}
+            </if>
         </where>
-    </select>
-
-
-    <select id="findAll" resultType="Action">
-        SELECT * FROM <include refid="tableName"/>
     </select>
 
 </mapper>

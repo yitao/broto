@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by yitao on 2016/5/11.
  */
-public class Role extends BaseDataEntity {
+public class Role extends BaseDeletedDataEntity {
     String name;
     String desc;
     Boolean inuse;
@@ -77,9 +77,4 @@ public class Role extends BaseDataEntity {
         this.state = state;
     }
 
-    @Override
-    public Role clone(){
-
-        return null;
-    }
 }

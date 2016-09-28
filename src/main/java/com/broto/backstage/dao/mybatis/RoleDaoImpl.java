@@ -5,8 +5,9 @@ import com.broto.backstage.entity.Role;
 import org.springframework.stereotype.Repository;
 
 /**
+ * 角色dao
  * Created by yitao on 2016/5/19.
  */
-@Repository("P_RoleDaoImpl")
+@Repository
 public class RoleDaoImpl extends BaseSqlDaoImpl<Role,String> implements RoleDao{
 }

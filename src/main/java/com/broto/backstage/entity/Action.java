@@ -8,19 +8,21 @@ import org.springframework.data.annotation.Transient;
 public class Action extends BaseLabelEntity implements Cloneable {
     String moduleId;
     String action;
+
     boolean exclude;//是否除外，黑名单为true,白名单为false，默认为白名单
     @Transient
-    int state;
+    int state;//勾选状态
+    boolean show;
 
     public Action() {
     }
 
-    public Action(String id, Long order, String icon, String label, String value, String hint, String desc, String moduleId, String action, int state, boolean exclude) {
-        super(id, order, icon, label, value, hint, desc);
+    public Action(long order, String icon, String label, String hint, String desc, String moduleId, String action, boolean exclude,boolean show) {
+        super(order, icon, label,  hint, desc);
         this.moduleId = moduleId;
         this.action = action;
-        this.state = state;
         this.exclude = exclude;
+        this.show = show;
     }
 
     public String getModuleId() {
@@ -55,9 +57,17 @@ public class Action extends BaseLabelEntity implements Cloneable {
         this.exclude = exclude;
     }
 
+    public boolean isShow() {
+        return show;
+    }
+
+    public void setShow(boolean show) {
+        this.show = show;
+    }
+
     @Override
     public Action clone() {
-        Action a = new Action(id, order, icon, label, value, hint, desc, moduleId, action, state, exclude);
+        Action a = new Action(order, icon, label, hint, desc, moduleId, action, exclude,show);
         return a;
     }
 }

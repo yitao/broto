@@ -11,29 +11,19 @@ public interface BaseSqlDao<T, PK extends Serializable> {
 
     void insert(T entity);
 
-    void delete(PK id);
-
     void delete(PK id, boolean isHardDelete);
+
+    void hardDelete(PK id);
 
     void update(T entity);
 
     void save(T entity);
 
-    T get(PK id);
+    T findById(PK id);
 
-    T get(Map<String, Object> query);
+    List<T> findAllByMap(Map<String, Object> query);
 
-    Long count();
-
-    List<T> findAll();
-
-    Long count(Boolean deleted);
-
-    List<T> findAll(Boolean deleted);
-
-    Long count(Map<String, Object> query);
-
-    List<T> find(Map<String, Object> query);
+    long countAllByMap(Map<String,Object> query);
 
 
 }

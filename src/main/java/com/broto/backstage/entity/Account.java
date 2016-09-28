@@ -8,10 +8,11 @@ import java.util.List;
  * Created by yitao on 2016/5/11.
  */
 
-public class Account extends BaseDataEntity {
+public class Account extends BaseDeletedDataEntity {
     String account;
     String password;
     boolean inuse;
+    String code;
     @Transient
     List<Role> roles;
 
@@ -37,6 +38,14 @@ public class Account extends BaseDataEntity {
 
     public void setInuse(boolean inuse) {
         this.inuse = inuse;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public List<Role> getRoles() {
