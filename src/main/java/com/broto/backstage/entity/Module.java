@@ -10,10 +10,11 @@ import java.util.List;
  */
 public class Module extends BaseLabelEntity implements Cloneable{
     String faModuleId;
-    @Transient
-    int state;
     boolean show;
     String code;
+
+    @Transient
+    int state;
 
     public Module() {
     }

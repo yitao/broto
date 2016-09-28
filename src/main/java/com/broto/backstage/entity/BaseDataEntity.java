@@ -14,7 +14,7 @@ public class BaseDataEntity implements Serializable {
     @Id
     protected String id;
     protected Date ctime = new Date();
-    protected Date mtime;
+    protected Date mtime = new Date();
 
     @Override
     public String toString() {

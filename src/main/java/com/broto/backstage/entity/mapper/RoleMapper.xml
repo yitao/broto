@@ -6,8 +6,8 @@
         bro_role
     </sql>
     <insert id="insert" parameterType="Role">
-        INSERT  INTO <include refid="tableName"/>(id,ctime,`order`,`name`,`desc`,`inuse`,`ap`,`code`)
-        VALUES (#{id},#{ctime},#{order},#{name},#{desc},#{inuse},#{ap},#{code})
+        INSERT  INTO <include refid="tableName"/>(id,ctime,`name`,`desc`,`inuse`,`ap`,`code`)
+        VALUES (#{id},#{ctime},#{name},#{desc},#{inuse},#{ap},#{code})
     </insert>
 
     <delete id="hardDelete" parameterType="String">
@@ -22,9 +22,6 @@
     <update id="update" parameterType="Role">
         UPDATE <include refid="tableName"/>
         <set>
-            <if test="order != null">
-                `order` = #{order},
-            </if>
             <if test="name != null">
                 `name` = #{name},
             </if>
@@ -56,9 +53,6 @@
         select * from <include refid="tableName"/>
         <where>
             1 = 1
-            <if test="order != null">
-                and `order` = #{order}
-            </if>
             <if test="name != null">
                 and `name` = #{name}
             </if>
@@ -87,9 +81,6 @@
         select count(*) from <include refid="tableName"/>
         <where>
             1 = 1
-            <if test="order != null">
-                and `order` = #{order}
-            </if>
             <if test="name != null">
                 and `name` = #{name}
             </if>

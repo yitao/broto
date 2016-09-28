@@ -10,7 +10,9 @@ import java.util.List;
 public class Role extends BaseDeletedDataEntity {
     String name;
     String desc;
-    Boolean inuse;
+    boolean inuse;
+    boolean ap;
+    String code;
 
     @Transient
     List<Module> modules;
@@ -18,8 +20,19 @@ public class Role extends BaseDeletedDataEntity {
     List<Role> openedRoles;
     @Transient
     List<Module> openedModules;
-
+    @Transient
     int state;
+
+    public Role() {
+    }
+
+    public Role(String name, String desc,String code, boolean inuse,boolean ap) {
+        this.name = name;
+        this.desc = desc;
+        this.code = code;
+        this.inuse = inuse;
+        this.ap = ap;
+    }
 
     public String getName() {
         return name;
@@ -37,11 +50,11 @@ public class Role extends BaseDeletedDataEntity {
         this.desc = desc;
     }
 
-    public Boolean getInuse() {
+    public boolean getInuse() {
         return inuse;
     }
 
-    public void setInuse(Boolean inuse) {
+    public void setInuse(boolean inuse) {
         this.inuse = inuse;
     }
 
@@ -77,4 +90,11 @@ public class Role extends BaseDeletedDataEntity {
         this.state = state;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
 }
