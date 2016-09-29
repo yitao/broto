@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f982f35-200b-4288-921b-514974468131" name="Default" comment="permission-html">
+    <list default="true" id="6f982f35-200b-4288-921b-514974468131" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <list id="0d1596c5-9953-4ff6-88bb-4828f6035974" name="nocommit" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto.war" afterPath="$PROJECT_DIR$/target/broto.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/dao/ActionDao.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/dao/ActionDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/dao/BaseSqlDao.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/dao/BaseSqlDao.class" />
@@ -23,7 +26,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/Role.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/Role.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/filter/PermissionFilter.class" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/filter/PermissionFilter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/broto/backstage/filter/PermissionFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/broto/backstage/filter/PermissionFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/ARMapper.xml" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/ARMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/AccountMapper.xml" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/AccountMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/ActionMapper.xml" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/ActionMapper.xml" />
@@ -31,9 +33,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/RMAMapper.xml" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/RMAMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/classes/com/broto/backstage/entity/mapper/RoleMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/views/admin/permission/ar.html" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/views/admin/permission/ar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/views/admin/permission/ar.html" afterPath="$PROJECT_DIR$/webapp/WEB-INF/views/admin/permission/ar.html" />
     </list>
-    <list id="0d1596c5-9953-4ff6-88bb-4828f6035974" name="nocommit" comment="" />
     <ignored path="broto.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -71,8 +71,8 @@
       <file leaf-file-name="ar.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/views/admin/permission/ar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.980427">
-              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.40569395">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -1497,7 +1497,7 @@
       <workItem from="1475026286136" duration="10067000" />
       <workItem from="1475059940783" duration="5540000" />
       <workItem from="1475111633729" duration="47000" />
-      <workItem from="1475134638867" duration="4052000" />
+      <workItem from="1475134638867" duration="4358000" />
     </task>
     <task id="LOCAL-00001" summary="code1">
       <created>1469524886271</created>
@@ -1589,7 +1589,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475137458448</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="permission-html">
+      <created>1475139110541</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1475139110541</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1625,7 +1631,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67555000" />
+    <option name="totallyTimeSpent" value="67861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -1646,7 +1652,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2366453" sideWeight="0.4860627" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2366453" sideWeight="0.4860627" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17217484" sideWeight="0.51373184" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2102,9 +2108,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="8" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2693#2694#0" expanded="true" />
-            <element signature="e#2727#2728#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2693#2694#0" expanded="false" />
+            <element signature="e#2727#2728#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2203,8 +2209,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/views/admin/permission/ar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.980427">
-          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.40569395">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
           <folding />
         </state>
       </provider>

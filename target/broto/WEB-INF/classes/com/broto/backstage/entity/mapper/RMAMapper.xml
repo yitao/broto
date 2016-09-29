@@ -24,9 +24,6 @@
         SELECT * FROM <include refid="tableName"/> WHERE role_id = #{roleId}
     </select>
 
-    <select id="findAll" resultType="RMA">
-        SELECT * FROM <include refid="tableName"/>
-    </select>
 
     <delete id="deleteByRoleId" parameterType="String">
         DELETE FROM <include refid="tableName"/> WHERE role_id = #{roleId}

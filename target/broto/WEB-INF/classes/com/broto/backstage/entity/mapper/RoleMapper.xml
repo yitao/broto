@@ -6,16 +6,22 @@
         bro_role
     </sql>
     <insert id="insert" parameterType="Role">
-        INSERT  INTO <include refid="tableName"/>(id,ctime,`order`,`name`,`desc`,inuse)
-        VALUES (#{id},#{ctime},#{order},#{name},#{desc},#{inuse})
+        INSERT  INTO <include refid="tableName"/>(id,ctime,`name`,`desc`,`inuse`,`ap`,`code`)
+        VALUES (#{id},#{ctime},#{name},#{desc},#{inuse},#{ap},#{code})
     </insert>
+
+    <delete id="hardDelete" parameterType="String">
+        DELETE FROM <include refid="tableName"/> WHERE id = #{id}
+    </delete>
+
+    <update id="noHardDelete" parameterType="String">
+        UPDATE <include refid="tableName"/>  <set>deleted=true</set> WHERE id = #{id}
+    </update>
+
 
     <update id="update" parameterType="Role">
         UPDATE <include refid="tableName"/>
         <set>
-            <if test="order != null">
-                `order` = #{order},
-            </if>
             <if test="name != null">
                 `name` = #{name},
             </if>
@@ -28,24 +34,75 @@
             <if test="mtime != null">
                 `mtime` = #{mtime},
             </if>
+            <if test="ap != null">
+                `ap` = #{ap},
+            </if>
+            <if test="code != null">
+                `code` = #{code},
+            </if>
         </set>
         WHERE id = #{id}
     </update>
 
-    <delete id="deleteById" parameterType="String">
-        DELETE FROM <include refid="tableName"/> WHERE id = #{id}
-    </delete>
 
-    <select id="findAll" resultType="Role">
-        SELECT * FROM <include refid="tableName"/>
-    </select>
-
-    <select id="getById" parameterType="String" resultType="Role">
-        SELECT * FROM <include refid="tableName"/> WHERE id = #{id}
-    </select>
-    
-    <select id="findOnyById" parameterType="String" resultType="Role">
+    <select id="findById" parameterType="String" resultType="Role">
         select * from <include refid="tableName"/> where id = #{id}
+    </select>
+
+    <select id="findAllByMap" parameterType="java.util.Map" resultType="Role">
+        select * from <include refid="tableName"/>
+        <where>
+            1 = 1
+            <if test="name != null">
+                and `name` = #{name}
+            </if>
+            <if test="desc != null">
+                and `desc` = #{desc}
+            </if>
+            <if test="inuse != null">
+                and `inuse` = #{inuse}
+            </if>
+            <if test="mtime != null">
+                and `mtime` = #{mtime}
+            </if>
+            <if test="deleted != null">
+                and deleted = #{deleted}
+            </if>
+            <if test="ap != null">
+                and `ap` = #{ap}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
+            </if>
+        </where>
+    </select>
+
+    <select id="countAllByMap" parameterType="java.util.Map" resultType="long">
+        select count(*) from <include refid="tableName"/>
+        <where>
+            1 = 1
+            <if test="name != null">
+                and `name` = #{name}
+            </if>
+            <if test="desc != null">
+                and `desc` = #{desc}
+            </if>
+            <if test="inuse != null">
+                and `inuse` = #{inuse}
+            </if>
+            <if test="mtime != null">
+                and `mtime` = #{mtime}
+            </if>
+            <if test="deleted != null">
+                and deleted = #{deleted}
+            </if>
+            <if test="ap != null">
+                and `ap` = #{ap}
+            </if>
+            <if test="code != null">
+                and `code` = #{code}
+            </if>
+        </where>
     </select>
 
 </mapper>

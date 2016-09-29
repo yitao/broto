@@ -15,7 +15,8 @@
     <resultMap id="RoleMap" type="Role">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
-        <result property="buildIn" column="buildIn"/>
+        <result property="code" column="code"/>
+        <result property="ap" column="ap"/>
         <result property="desc" column="desc"/>
     </resultMap>
 
