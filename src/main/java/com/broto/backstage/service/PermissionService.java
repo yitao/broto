@@ -85,12 +85,19 @@ public class PermissionService {
 
     public R2R saveR2R(String roleId, String openedRoleId) {
         R2R r2r = new R2R(roleId, openedRoleId);
+        return saveR2R(r2r);
+    }
+    public R2R saveR2R(R2R r2r) {
         r2rDao.insert(r2r);
         return r2r;
     }
 
     public void deleteR2R(String roleId, String openedRoleId) {
         R2R r2r = new R2R(roleId, openedRoleId);
+        deleteR2R(r2r);
+    }
+
+    public void deleteR2R(R2R r2r) {
         r2rDao.delete(r2r);
     }
 

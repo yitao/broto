@@ -77,4 +77,54 @@ public class PermissionServiceTest extends AbstractJUnit4SpringContextTests {
         System.out.println();
     }
 
+    @Test
+    public void testSaveR2R(){
+        Role role = roleService.findOneByCode("TEST");
+        if(role!=null){
+            R2R r2r = new R2R(role.getId(),role.getId());
+            permissionService.saveR2R(r2r);
+            System.out.println(r2r);
+        }
+    }
+
+    @Test
+    public void testDeleteR2R(){
+        Role role = roleService.findOneByCode("TEST");
+        if(role!=null){
+            R2R r2r = new R2R(role.getId(),role.getId());
+            permissionService.deleteR2R(r2r);
+            System.out.println(r2r);
+        }
+    }
+
+    @Test
+    public void testSaveR2MA() {
+        System.out.println();
+        Role role = roleService.findOneByCode("TEST");
+        Module module = moduleService.findOneByCode("TEST");
+        if (role != null && module != null) {
+            List<Action> actions = actionService.findAllByModuleId(module.getId());
+            for (Action aciton : actions) {
+                R2MA rma = permissionService.saveR2MA(role.getId(), module.getId(), aciton.getId());
+                System.out.println(rma);
+            }
+        }
+        System.out.println();
+    }
+
+    @Test
+    public void testDeleteR2MA(){
+        System.out.println();
+        Role role = roleService.findOneByCode("TEST");
+        Module module = moduleService.findOneByCode("TEST");
+        if (role != null && module != null) {
+            List<Action> actions = actionService.findAllByModuleId(module.getId());
+            for (Action aciton : actions) {
+                permissionService.deleteR2MA(role.getId(), module.getId(), aciton.getId());
+            }
+        }
+        System.out.println();
+    }
+
+
 }
