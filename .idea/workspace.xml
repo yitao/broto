@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f982f35-200b-4288-921b-514974468131" name="Default" comment="permission-html">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/WEB-INF/decorators/common/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto.war" afterPath="$PROJECT_DIR$/target/broto.war" />
+    <list default="true" id="6f982f35-200b-4288-921b-514974468131" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/decorators/admin/main.html" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/decorators/admin/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/sitemesh3.xml" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/sitemesh3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/broto/WEB-INF/views/admin/permission/ar.html" afterPath="$PROJECT_DIR$/target/broto/WEB-INF/views/admin/permission/ar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/decorators/admin/main.html" afterPath="$PROJECT_DIR$/webapp/WEB-INF/decorators/admin/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/sitemesh3.xml" afterPath="$PROJECT_DIR$/webapp/WEB-INF/sitemesh3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/WEB-INF/views/admin/permission/ar.html" afterPath="$PROJECT_DIR$/webapp/WEB-INF/views/admin/permission/ar.html" />
     </list>
     <list id="0d1596c5-9953-4ff6-88bb-4828f6035974" name="nocommit" comment="" />
     <ignored path="broto.iws" />
@@ -123,7 +114,7 @@
         <entry file="jar://$MAVEN_REPOSITORY$/org/sitemesh/sitemesh/3.0.0/sitemesh-3.0.0.jar!/org/sitemesh/config/ConfigurableSiteMeshFilter.class">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.68604654">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -851,44 +842,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="broto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="broto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="broto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="broto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1767,7 +1720,7 @@
       <workItem from="1475059940783" duration="5540000" />
       <workItem from="1475111633729" duration="47000" />
       <workItem from="1475134638867" duration="4358000" />
-      <workItem from="1475198011686" duration="6144000" />
+      <workItem from="1475198011686" duration="6228000" />
     </task>
     <task id="LOCAL-00001" summary="code1">
       <created>1469524886271</created>
@@ -1865,7 +1818,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475139110541</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="permission-html">
+      <created>1475214034791</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1475214034791</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1901,11 +1860,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74005000" />
+    <option name="totallyTimeSpent" value="74089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1917,7 +1876,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31036323" sideWeight="0.5139373" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37919825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37919825" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2431,7 +2390,7 @@
     <entry file="jar://$MAVEN_REPOSITORY$/org/sitemesh/sitemesh/3.0.0/sitemesh-3.0.0.jar!/org/sitemesh/config/ConfigurableSiteMeshFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.68604654">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>
